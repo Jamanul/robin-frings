@@ -114,7 +114,9 @@ a {
 .wm-text-justify {
   text-align: justify;
 }
-
+.wm-gap-32{
+  gap: 32px !important;
+}
 /* main css */
 
 .navbar {
@@ -168,6 +170,9 @@ a {
 .slider-title {
   color: var(--black);
 }
+.slider-conatiner:hover .slider {
+  animation-play-state: paused;
+}
 @keyframes slide {
   0% {
     transform: translateX(-100%);
@@ -204,7 +209,7 @@ a {
   padding: 10px 0px !important;
 }
 .secondary-slider {
-  animation: secondary-slide 15s infinite linear;
+  animation: secondary-slide 50s infinite linear;
   gap: 66px;
   display: inline-flex;
 }
@@ -250,11 +255,11 @@ a {
   z-index: 1;
 }
 
-.swiper-slide {
+.swiper-slide-custom {
     transition: transform 2s ease, opacity 2s ease; /* Smooth transition for scaling and opacity */
   }
   
-  .swiper-slide,
+  .swiper-slide-custom,
   .swiper-slide-next,
   .swiper-slide-prev {
     transform: scale(0.63)  !important; /* Default scale and position */
@@ -293,4 +298,89 @@ a {
 .button-holder{
     gap: 32px;
     margin-top: 40px !important;
+}
+/* about section */
+.about-section{
+  margin: 140px auto !important;
+}
+.about-dsc{
+  color: var(--light-gray);
+  margin-bottom: 32px !important;
+}
+.wm-block{
+  display: block;
+}
+.about-button-white{
+  color: var(--black);
+  padding: 6px 16px !important;
+  background: var(--white);
+  border-radius: 87px;
+  border: none;
+}
+.about-button-black{
+  border: 1px solid var(--white);
+  padding: 6px 16px !important;
+  background: transparent;
+  border-radius: 87px;
+  color: var(--white);
+}
+.button-container{
+  margin-bottom: 98px !important;
+}
+
+.dark-overlay-about{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.5) 100%);
+  z-index: 1;
+}
+.row {
+  padding: 0px !important;
+}
+
+.about-top-content{
+  position: absolute;
+  left: 106px;
+bottom: 99px;
+z-index: 2;
+}
+.about-top-dsc{
+  font-weight: 700 !important;
+  max-width: 816px !important;
+}
+.about-img-section {
+  overflow: hidden !important;
+  position: relative; 
+  display: inline-block; 
+  width: 100%; 
+  height: auto; 
+}
+
+.about-img-section img {
+  display: block; 
+  width: 100%; 
+  height: auto; 
+  transition: transform 0.5s ease; 
+}
+
+.about-img-section:hover img {
+  transform: scale(1.1); 
+}
+.about-bottom-dsc{
+  position: absolute;
+  left: 25px;
+  bottom: 48px;
+  z-index: 2;
+  max-width: 342px;
+}
+.about-button-container {
+margin-top: 70px !important;
+padding: 10px !important;
+}
+.secondary-slider-section {
+  margin: 0px auto 140px auto !important;
+
 }
