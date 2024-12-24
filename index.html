@@ -661,86 +661,97 @@
             <span class="wm-block">media berichten en persberichten.</span>
           </p>
           <div
-            class="button-container d-flex align-items-center justify-content-center gap-md-3"
+            class="tab-button-container d-flex align-items-center justify-content-center gap-md-3"
           >
-            <button class="about-button-white wm-text-normal" type="button">
+            <button class="about-button about-button-active tab-button wm-text-normal" data-tab="about-tab" type="button">
               Nieuw- en persbrichten
             </button>
-            <button class="about-button-black wm-text-normal" type="button">
+            <button class="about-button tab-button wm-text-normal" data-tab="social-tab" type="button">
               Social media
             </button>
           </div>
         </div>
         <!-- about pictures -->
-        <div class="row flex-column wm-gap-32">
-          <div class="col-md-12 relative">
-            <div class="about-img-section">
-              <img src="./public/images/about.png" alt="robinfrings" />
-              <div class="dark-overlay-about"></div>
-            </div>
-            <div class="about-top-content">
-              <button
-                class="about-button-white wm-text-normal mb-md-3"
-                type="button"
+        <div data-tab="about-tab" class="about-tab-section tab-panel">
+            <div class="row flex-column wm-gap-32">
+                <div class="col-md-12 relative">
+                  <div class="about-img-section">
+                    <img src="./public/images/about.png" alt="robinfrings" />
+                    <div class="dark-overlay-about"></div>
+                  </div>
+                  <div class="about-top-content">
+                    <button
+                      class="about-button-white wm-text-normal mb-md-3"
+                      type="button"
+                    >
+                      Uitgelicht
+                    </button>
+                    <p class="wm-text-xxl about-top-dsc">
+                      Grootste droom van dove acteur Robin (28) komt uit: hij
+                      schittert voor het eerst op het witte doek
+                    </p>
+                  </div>
+                </div>
+                <div class="col-md-12">
+                  <div class="row">
+                    <div class="col-md-4 relative">
+                      <div class="about-img-section">
+                        <img
+                          src="./public/images/nieuws-1.png"
+                          alt="about pictures"
+                        />
+                        <div class="dark-overlay-about"></div>
+                      </div>
+                      <p class="wm-text-xl about-bottom-dsc">
+                        Van Gordon tot Bas Smit, BN’ers staan te springen om
+                        naamgebaar van Robin Frings: herken jij de gebaren?
+                      </p>
+                    </div>
+                    <div class="col-md-4 relative">
+                      <div class="about-img-section">
+                        <img
+                          src="./public/images/nieuws-2.png"
+                          alt="about pictures"
+                        />
+                        <div class="dark-overlay-about"></div>
+                      </div>
+                      <p class="wm-text-xl about-bottom-dsc">
+                        Kan ik agent worden?’ vraagt dove 8-jarige aan influencer
+                        Robin: hij schrikt en zegt volmondig ‘ja’
+                      </p>
+                    </div>
+                    <div class="col-md-4 relative">
+                      <div class="about-img-section">
+                        <img
+                          src="./public/images/nieuws-3.png"
+                          alt="about pictures"
+                        />
+                        <div class="dark-overlay-about"></div>
+                      </div>
+                      <p class="wm-text-xl about-bottom-dsc">
+                        Muziektolk Robin (26) maakt razendsnel naam na Eurovisie
+                        Songfestival: ‘Dit past perfect bij mij’
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div
+                class="about-button-container d-flex align-items-center justify-content-center"
               >
-                Uitgelicht
-              </button>
-              <p class="wm-text-xxl about-top-dsc">
-                Grootste droom van dove acteur Robin (28) komt uit: hij
-                schittert voor het eerst op het witte doek
-              </p>
-            </div>
-          </div>
-          <div class="col-md-12">
-            <div class="row">
-              <div class="col-md-4 relative">
-                <div class="about-img-section">
-                  <img
-                    src="./public/images/nieuws-1.png"
-                    alt="about pictures"
-                  />
-                  <div class="dark-overlay-about"></div>
-                </div>
-                <p class="wm-text-xl about-bottom-dsc">
-                  Van Gordon tot Bas Smit, BN’ers staan te springen om
-                  naamgebaar van Robin Frings: herken jij de gebaren?
-                </p>
+                <button class="nav-button text-white wm-text-normal" type="button">
+                  Alles bekijken
+                </button>
               </div>
-              <div class="col-md-4 relative">
-                <div class="about-img-section">
-                  <img
-                    src="./public/images/nieuws-2.png"
-                    alt="about pictures"
-                  />
-                  <div class="dark-overlay-about"></div>
-                </div>
-                <p class="wm-text-xl about-bottom-dsc">
-                  Kan ik agent worden?’ vraagt dove 8-jarige aan influencer
-                  Robin: hij schrikt en zegt volmondig ‘ja’
-                </p>
-              </div>
-              <div class="col-md-4 relative">
-                <div class="about-img-section">
-                  <img
-                    src="./public/images/nieuws-3.png"
-                    alt="about pictures"
-                  />
-                  <div class="dark-overlay-about"></div>
-                </div>
-                <p class="wm-text-xl about-bottom-dsc">
-                  Muziektolk Robin (26) maakt razendsnel naam na Eurovisie
-                  Songfestival: ‘Dit past perfect bij mij’
-                </p>
-              </div>
-            </div>
-          </div>
         </div>
-        <div
-          class="about-button-container d-flex align-items-center justify-content-center"
-        >
-          <button class="nav-button text-white wm-text-normal" type="button">
-            Alles bekijken
-          </button>
+        <div data-tab="social-tab" class="social-tab-section tab-panel hidden">
+            <h2>social se4ction</h2>
+            <div id="controls">
+                <button id="add-more">Add More</button>
+                <button id="remove" style="display: none;">Remove</button>
+              </div>
+              <div style="row-gap: 24px;" class="row" id="video-container"></div>
+              
         </div>
       </section>
       <!-- second swiper slider -->

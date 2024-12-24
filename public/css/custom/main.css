@@ -120,6 +120,9 @@ a {
 .wm-gap-32{
   gap: 32px !important;
 }
+.hidden{
+  display: none !important;
+}
 /* main css */
 .nav-link {
     text-decoration: none;
@@ -343,21 +346,21 @@ a {
 .wm-block{
   display: block;
 }
-.about-button-white{
-  color: var(--black);
+.about-button-active,.about-button-white{
+  color: var(--black) !important;
   padding: 6px 16px !important;
-  background: var(--white);
+  background: var(--white) !important;
   border-radius: 87px;
-  border: none;
+  border: none !important;
 }
-.about-button-black{
+.about-button{
   border: 1px solid var(--white);
   padding: 6px 16px !important;
   background: transparent;
   border-radius: 87px;
   color: var(--white);
 }
-.button-container{
+.tab-button-container{
   margin-bottom: 98px !important;
 }
 

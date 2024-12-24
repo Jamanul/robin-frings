@@ -21,9 +21,6 @@
   .stacking-card-dsc{
     color: var(--light-gray);
   }
-  .stacking-card-wrapper{
-    
-  }
   .stacking-card{
     top: 30px;
     position: sticky;
@@ -69,4 +66,20 @@
     width: 100%;
     height: 100%;
     background-color: rgba(0, 0, 0, 0.4);
+}
+.over-contact-section{
+    margin: 140px auto !important;
+}
+.over-dsc{
+    color: var(--light-gray);
+}
+.over-contact-card{
+    margin-top: 80px !important;
+}
+.over-contact-card img{
+    width: 100% !important;
+}
+.over-contact-card h2{
+    position: relative !important;
+    left: -150px;
 }
