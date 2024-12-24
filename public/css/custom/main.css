@@ -141,6 +141,9 @@ a {
   max-width: 775px !important;
   margin: 217px auto 190px 0px !important;
 }
+.hero-section{
+  overflow: hidden;
+}
 .hero-description {
   color: var(--light-gray);
   max-width: 395px !important;
@@ -148,8 +151,8 @@ a {
 }
 .hero-image {
   position: absolute !important;
-  top: -366px;
-  right: 30px;
+  top: -200px;
+  right: -150px;
   z-index: -1;
 }
 .slider-conatiner {

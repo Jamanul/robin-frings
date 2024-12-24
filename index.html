@@ -1100,29 +1100,6 @@
 <script src="./public/css/lib/bootstrap.bundle.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 <script src="https://unpkg.com/split-type"></script>
-<script type="module">
-  import studioFreightlenis from "https://cdn.jsdelivr.net/npm/@studio-freight/lenis@1.0.42/+esm";
-
-  const lenis = new studioFreightlenis();
-  const update = () => {
-    lenis.raf();
-    requestAnimationFrame(update);
-  };
-  requestAnimationFrame(update);
-
-  gsap.registerPlugin(ScrollTrigger);
-  ScrollTrigger.scrollerProxy(document.body, {
-    scrollTop(value) {
-      return arguments.length ? lenis.scrollTo(value) : lenis.scroll.instance.scroll;
-    },
-    getBoundingClientRect() {
-      return { top: 0, left: 0, width: window.innerWidth, height: window.innerHeight };
-    },
-    pinType: document.body.style.transform ? "transform" : "fixed",
-  });
-
-  lenis.on("scroll", ScrollTrigger.update);
-</script>
 <script>
   
   gsap.registerPlugin(ScrollTrigger)
@@ -1148,6 +1125,16 @@ splitTypes.forEach((char,i) => {
     })
 });
 
+gsap.to(".hero-image img", {
+  y: -50, // Move the image up by 50px
+  ease: "power2.out", // Smoother easing
+  scrollTrigger: {
+    trigger: ".container",
+    start: "top top", // Start the animation when the container reaches the top
+    end: "bottom top", // End when the container is fully scrolled out
+    scrub: 1, // Scrubbing with a duration for smoother transitions
+  },
+});
 
 </script>
 
