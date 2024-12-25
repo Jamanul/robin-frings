@@ -99,7 +99,6 @@ function startCountUp(targetNumber, elementId, intervalTime, callback) {
 });
 
 
-// Array of video sources
 const videoSources = [
   './public/video/0.mp4',
   './public/video/1.mp4',
@@ -121,17 +120,75 @@ const outputDiv = document.getElementById('video-container');
 // Initial display
 let array = videoSources.slice(0, 3); // Show first 3 videos
 
-// Function to update output
-function updateOutput() {
-  outputDiv.innerHTML = ''; // Clear previous content
-  array.forEach(src => {
-    const videoElement = document.createElement('div');
-    videoElement.classList.add('col-md-4');
-    videoElement.innerHTML=`<video src=${src}  style="width: 100%; display: block;" muted></video>`
-    outputDiv.appendChild(videoElement);
+// Function to add hover play/pause functionality
+function addVideoHoverEvents() {
+  const videos = document.querySelectorAll('#video-container video'); // Target videos inside the container
+  videos.forEach(video => {
+    video.addEventListener('mouseenter', () => {
+      video.play();
+    });
+    video.addEventListener('mouseleave', () => {
+      video.pause();
+      video.currentTime = 0; // Reset to the beginning
+    });
   });
 }
 
+// Function to update output
+function updateOutput(withAnimation = true) {
+  const existingVideoSources = Array.from(outputDiv.querySelectorAll('video')).map(video => {
+    // Use the relative `src` to compare
+    const srcPath = new URL(video.src).pathname;
+    return `.${srcPath}`;
+  });
+
+  // Add new elements if needed
+  array.forEach(src => {
+    if (!existingVideoSources.includes(src)) {
+      const videoElement = document.createElement('div');
+      videoElement.classList.add('col-md-4');
+      videoElement.classList.add('video-container'); // For animation
+      videoElement.innerHTML = `
+        <video 
+          src="${src}" 
+          style="width: 100%; display: block; border-radius: 12px;" 
+          muted
+        ></video>`;
+      if (withAnimation) {
+        videoElement.style.animation = 'fadeIn 0.5s ease';
+      }
+      outputDiv.appendChild(videoElement);
+    }
+  });
+
+  // Remove extra elements beyond the array
+  Array.from(outputDiv.children).forEach(child => {
+    const videoSrc = `.${new URL(child.querySelector('video').src).pathname}`;
+    if (!array.includes(videoSrc)) {
+      if (withAnimation) {
+        child.style.animation = 'fadeOut 0.5s ease';
+        setTimeout(() => child.remove(), 500); // Wait for animation to finish
+      } else {
+        child.remove();
+      }
+    }
+  });
+
+  // Add hover events for new videos
+  addVideoHoverEvents();
+}
+
+// Function to show a button with a fade-in effect
+function showButton(button) {
+  button.style.display = 'inline-block'; // Ensure it's visible
+}
+// Function to hide a button with a fade-out effect
+function hideButton(button) {
+  setTimeout(() => {
+    button.style.display = 'none';     // Hide after animation
+  }, 500); // Match the duration of the fade-out animation
+}
+const buttonContainer = document.getElementById('controls')
 // Add More functionality
 addMoreButton.addEventListener('click', () => {
   // Add 3 more elements to the array
@@ -143,49 +200,40 @@ addMoreButton.addEventListener('click', () => {
 
   // Show the remove button if the array has more than 3 elements
   if (array.length > 3) {
-    removeButton.style.display = 'inline-block';
+    showButton(removeButton);
   }
 
-  // Hide the Add More button after reaching a limit (optional, e.g., 9 additional elements)
+  // Hide the Add More button after reaching the limit
   if (array.length >= videoSources.length) {
-    addMoreButton.style.display = 'none';
+    hideButton(addMoreButton);
   }
 });
 
 // Remove functionality
 removeButton.addEventListener('click', () => {
-  // Remove the last 3 elements
-  array.splice(-3, 3);
+  // Calculate the number of items to remove
+  const itemsToRemove = array.length % 3 === 0 ? 3 : array.length % 3;
+
+  // Remove the calculated number of elements from the array
+  array.splice(-itemsToRemove, itemsToRemove);
 
   // Update output
   updateOutput();
 
   // Hide the Remove button if no extra elements are left
   if (array.length <= 3) {
-    removeButton.style.display = 'none';
+    hideButton(removeButton);
   }
 
   // Show the Add More button if hidden
   if (array.length < videoSources.length) {
-    addMoreButton.style.display = 'inline-block';
+    showButton(addMoreButton);
   }
 });
 
-// Initial output
+
+// Initial setup for buttons
 updateOutput();
-
-
-
-// to play pause the video
-  const videos = document.querySelectorAll('video');
-
-  videos.forEach(video=>{
-    video.addEventListener('mouseenter', () => {
-      video.play();
-    });
-  
-    video.addEventListener('mouseleave', () => {
-      video.pause();
-      video.currentTime = 0; // Reset to the beginning
-    });
-  })
+if (array.length <= 3) {
+  hideButton(removeButton);
+}

@@ -172,7 +172,9 @@ a {
   margin: 217px auto 190px 0px !important;
 }
 .hero-section{
-  overflow: hidden;
+  position: relative;
+  overflow: visible; /* Allow overflow initially */
+  clip-path: inset(-100% -100% 0px -100%); /* Hide bottom overflow by 50px */
 }
 .hero-description {
   color: var(--light-gray);
@@ -363,7 +365,38 @@ a {
 .tab-button-container{
   margin-bottom: 98px !important;
 }
+.controls-button-container{
+  margin-top: 80px !important;
+}
+@keyframes fadeIn {
+  from {
+    clip-path: polygon(0 0, 100% 0, 100% 0, 0 0); /* Hidden at the top */
+    height: 0; 
+  }
+  to {
+    clip-path: polygon(0 0, 100% 0, 100% 700px, 0 700px);
+    height: 700px; /* Expand to full height */
+  }
+}
 
+@keyframes fadeOut {
+  from {
+    opacity: 0;
+    clip-path: polygon(0 0, 100% 0, 100% 700px, 0 700px); /* Start at full height */
+    height: 700px; 
+    
+  }
+  to {
+    opacity: 0;
+    clip-path: polygon(0 0, 100% 0, 100% 700px, 0 700px); 
+    height: 0; 
+    
+  }
+}
+
+.video-container {
+  animation-fill-mode: both;
+}
 .dark-overlay-about{
   position: absolute;
   top: 0;
@@ -417,7 +450,9 @@ z-index: 2;
 margin-top: 70px !important;
 padding: 10px !important;
 }
-
+.secondary-slider-section{
+  background: var(--background-dark);
+}
 .secondary-slider-dsc{
   font-size: 30px;
 font-style: italic;

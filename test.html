@@ -4,8 +4,42 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
+    <style>
+@keyframes slideUp {
+  from {
+    height: 100px; /* Initial height */
+    opacity: 1;    /* Fully visible */
+  }
+  to {
+    height: 0;    /* Collapse to 0 */
+    opacity: 0;   /* Fully transparent */
+  }
+}
+
+.container {
+  overflow: hidden; /* Ensure no overflow is visible */
+}
+
+.hidden {
+  animation: slideUp 0.5s ease forwards; /* Apply the slide-up animation */
+}
+    </style>
   </head>
   <body>
-   
+    <div class="container">
+      <div class="content">
+        <p>This is some content that will be hidden smoothly.</p>
+      </div>
+    </div>
+    <button id="hide-button">Hide</button>
+    <script>
+      // Array of video sources
+      const hideButton = document.getElementById('hide-button');
+const container = document.querySelector('.container');
+
+hideButton.addEventListener('click', () => {
+  container.classList.add('hidden'); // Add the class to collapse the container
+});
+    </script>
   </body>
 </html>
