@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <link rel="stylesheet" href="./public/css/custom/main.css" />
+    <link rel="stylesheet" href="./public/css/custom/media.css" />
     <link rel="stylesheet" href="./public/css/custom/responsive.css" />
     <link rel="stylesheet" href="./public/css/lib/bootstrap-5-2-3.min.css" />
     <!-- google fonts -->
@@ -19,11 +20,14 @@
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
     />
+    <script src="
+    https://cdn.jsdelivr.net/npm/@studio-freight/lenis@1.0.42/dist/lenis.min.js
+    "></script>
   </head>
   <body>
     <header>
       <nav class="navbar container mx-auto d-flex justify-content-between">
-        <img src="./public/images/robin logo 1.png" alt="RF" />
+        <a href="index.html"><img src="./public/images/robin logo 1.png" alt="RF" /></a>
         <div>
           <ul
             class="d-flex nav-links wm-text-normal align-items-center text-white"
@@ -34,7 +38,7 @@
             </li>
             <li><a class="nav-link" href="media.html">In de media</a></li>
             <li>
-              <a href="/contact"
+              <a href="contact.html"
                 ><button
                   class="nav-button text-white wm-text-normal"
                   type="button"
@@ -48,15 +52,16 @@
       </nav>
     </header>
     <main>
-      <section class="hero-section">
+      <!-- hero section -->
+      <section class="hero-section gsap-container">
         <div class="container relative">
-          <div class="hero-wrapper">
-            <h1 class="text-white wm-h-1">Robin Frings</h1>
-            <p class="wm-text-md hero-description">
+          <div class="hero-wrapper ">
+            <h1 class="text-white wm-h-1 text-reveal">Robin Frings</h1>
+            <p class="wm-text-md hero-description text-reveal">
               Robin Frings, acteur, content creator en bekend van NPO Zappelin,
               Alleskunner VIPS en Buenas Chicas.
             </p>
-            <div class="d-flex gap-4">
+            <div class="d-flex gap-4 text-reveal">
               <div class="d-flex align-items-center gap-2">
                 <img src="./public/icons/instragram.svg" alt="instragram" />
                 <p>@robinfrings</p>
@@ -237,6 +242,153 @@
                 <img src="./public/icons/tiktok-black.svg" alt="tik-tok" />
               </div>
             </div>
+          </div>
+        </div>
+      </section>
+      <!--about section  -->
+      <section class="container media-about-section">
+        <h2 class="button-margin wm-h-2">Nieuws- en persberichten</h2>
+        <div class="about-tab-section tab-panel">
+          <div class="row flex-column wm-gap-32">
+            <div class="col-md-12 relative about-img-section-container">
+              <div class="about-img-section">
+                <img src="./public/images/about.png" alt="robinfrings" />
+                <div class="dark-overlay-about"></div>
+              </div>
+              <div class="about-top-content">
+                <button
+                  class="about-button-white wm-text-normal mb-md-3"
+                  type="button"
+                >
+                  Uitgelicht
+                </button>
+                <p class="wm-text-xxl about-top-dsc">
+                  Grootste droom van dove acteur Robin (28) komt uit: hij
+                  schittert voor het eerst op het witte doek
+                </p>
+              </div>
+            </div>
+            <div class="col-md-12">
+              <div style="row-gap: 16px" class="row">
+                <div class="col-md-4 relative about-img-section-container">
+                  <div class="about-img-section">
+                    <img
+                      src="./public/images/nieuws-1.png"
+                      alt="about pictures"
+                    />
+                    <div class="dark-overlay-about"></div>
+                  </div>
+                  <p class="wm-text-xl about-bottom-dsc">
+                    Van Gordon tot Bas Smit, BN’ers staan te springen om
+                    naamgebaar van Robin Frings: herken jij de gebaren?
+                  </p>
+                </div>
+                <div class="col-md-4 relative about-img-section-container">
+                  <div class="about-img-section">
+                    <img
+                      src="./public/images/nieuws-2.png"
+                      alt="about pictures"
+                    />
+                    <div class="dark-overlay-about"></div>
+                  </div>
+                  <p class="wm-text-xl about-bottom-dsc">
+                    Kan ik agent worden?’ vraagt dove 8-jarige aan influencer
+                    Robin: hij schrikt en zegt volmondig ‘ja’
+                  </p>
+                </div>
+                <div class="col-md-4 relative about-img-section-container">
+                  <div class="about-img-section">
+                    <img
+                      src="./public/images/nieuws-3.png"
+                      alt="about pictures"
+                    />
+                    <div class="dark-overlay-about"></div>
+                  </div>
+                  <p class="wm-text-xl about-bottom-dsc">
+                    Muziektolk Robin (26) maakt razendsnel naam na Eurovisie
+                    Songfestival: ‘Dit past perfect bij mij’
+                  </p>
+                </div>
+                <div class="col-md-4 media-hidden">
+                  <div class="relative about-img-section-container">
+                    <div class="about-img-section">
+                      <img
+                        src="./public/images/nieuws-1.png"
+                        alt="about pictures"
+                      />
+                      <div class="dark-overlay-about"></div>
+                    </div>
+                    <p class="wm-text-xl about-bottom-dsc">
+                      Van Gordon tot Bas Smit, BN’ers staan te springen om
+                      naamgebaar van Robin Frings: herken jij de gebaren?
+                    </p>
+                  </div>
+                </div>
+                <div class="col-md-4 media-hidden">
+                  <div class="relative about-img-section-container">
+                    <div class="about-img-section">
+                      <img
+                        src="./public/images/nieuws-2.png"
+                        alt="about pictures"
+                      />
+                      <div class="dark-overlay-about"></div>
+                    </div>
+                    <p class="wm-text-xl about-bottom-dsc">
+                      Van Gordon tot Bas Smit, BN’ers staan te springen om
+                      naamgebaar van Robin Frings: herken jij de gebaren?
+                    </p>
+                  </div>
+                </div>
+                <div class="col-md-4 media-hidden relative">
+                  <div class="relative about-img-section-container">
+                    <div class="about-img-section">
+                      <img
+                        src="./public/images/nieuws-3.png"
+                        alt="about pictures"
+                      />
+                      <div class="dark-overlay-about"></div>
+                    </div>
+                    <p class="wm-text-xl about-bottom-dsc">
+                      Van Gordon tot Bas Smit, BN’ers staan te springen om
+                      naamgebaar van Robin Frings: herken jij de gebaren?
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            class="about-button-container d-flex align-items-center justify-content-center"
+          >
+            <button
+              id="toggle-button"
+              class="nav-button text-white wm-text-normal"
+              type="button"
+            >
+              Alles bekijken
+            </button>
+          </div>
+        </div>
+      </section>
+      <!-- social section -->
+      <section class="container media-social-section">
+        <h2 class="button-margin wm-h-2">Social Media</h2>
+        <div class="social-tab-section tab-panel">
+          <div style="row-gap: 24px" class="row" id="video-container"></div>
+          <div
+            id="controls"
+            class="d-flex align-items-center justify-content-center controls-button-container gap-4"
+          >
+            <button id="add-more" class="nav-button text-white wm-text-normal">
+              Alles bekijken
+            </button>
+            <button
+              id="remove"
+              style="display: none"
+              class="nav-button text-white wm-text-normal"
+            >
+              Minder weergeven
+            </button>
           </div>
         </div>
       </section>
@@ -756,16 +908,41 @@
         <!--  -->
       </section>
     </main>
-    <footer></footer>
+    <footer>
+      <p class="wm-text-sm text-center footer">
+        © Copyright 2024 Robin Frings | Website gemaakt door
+        <span class="footer-span">Grandsolution</span>
+      </p>
+    </footer>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
     <script src="./public/js/script.js"></script>
     <script src="./public/css/lib/bootstrap.bundle.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="https://unpkg.com/split-type"></script>
+
     <script>
+      const lenis = new Lenis();
+
+      //   Handle Lenis scroll events
+      lenis.on("scroll", (e) => {
+        console.log("Scroll event:", e); // Log scroll details
+      });
+
+      // Request animation frame for smooth scrolling
+      function raf(time) {
+        lenis.raf(time); // Update Lenis for smooth scrolling
+        requestAnimationFrame(raf); // Continue the loop
+      }
+
+      //   Start the animation frame loop
+      requestAnimationFrame(raf);
+
+      // GSAP ScrollTrigger setup
+      // Register GSAP ScrollTrigger
       gsap.registerPlugin(ScrollTrigger);
 
+      // Split Text animation example
       const splitTypes = document.querySelectorAll(".counter-dsc");
 
       splitTypes.forEach((char, i) => {
@@ -774,26 +951,41 @@
         gsap.from(text.chars, {
           scrollTrigger: {
             trigger: char,
-            start: "top 70%",
-            end: "top 20%",
-            scrub: true,
-            markers: false,
+            start: "top 70%", // Start animating when 70% of the element is visible
+            end: "top 20%", // Animation stops when 20% of the element is visible
+            scrub: true, // Smooth animation scrubbing
           },
           opacity: 0.1,
           stagger: 0.1,
         });
       });
 
+      // Hero image movement animation
       gsap.to(".hero-image img", {
-        y: -50, // Move the image up by 50px
+        y: -50, // Move image up by 50px
         ease: "power2.out", // Smoother easing
         scrollTrigger: {
           trigger: ".container",
-          start: "top top", // Start the animation when the container reaches the top
-          end: "bottom top", // End when the container is fully scrolled out
-          scrub: 1, // Scrubbing with a duration for smoother transitions
+          start: "top top", // Start animation when the container reaches the top of the viewport
+          end: "bottom top", // End animation when the container is fully scrolled out
+          scrub: 1, // Enable smooth scrolling and animation
         },
       });
+      window.addEventListener("load", () => {
+      gsap.fromTo(
+        ".text-reveal",
+        { y: 350, opacity: 0 }, // Start position and opacity
+        {
+          y: 0, // End position
+          opacity: 1, // End opacity
+          duration: 1.5, // Animation duration
+          ease: "power2.out", // Smooth easing
+          onComplete: () => {
+            console.log("Animation Complete"); // Optional: Confirm animation is done
+          },
+        }
+      );
+    });
     </script>
 
     <script>

@@ -237,3 +237,32 @@ updateOutput();
 if (array.length <= 3) {
   hideButton(removeButton);
 }
+
+//its fot the about card
+const toggleButton = document.getElementById('toggle-button');
+const hiddenItems = document.querySelectorAll('.media-hidden');
+
+let isVisible = false; // Track visibility state
+
+toggleButton.addEventListener('click', () => {
+  if (isVisible) {
+    // Hide items
+    hiddenItems.forEach((item) => {
+      item.classList.add('media-hidden-anim'); // Apply fadeOut animation
+      item.addEventListener('animationend', () => {
+        item.classList.remove('media-visible', 'media-hidden-anim'); // Cleanup classes
+        item.style.display = 'none'; // Hide completely
+      }, { once: true });
+    });
+    toggleButton.textContent = 'Alles bekijken';
+  } else {
+    // Show items
+    hiddenItems.forEach((item) => {
+      item.style.display = 'block'; // Ensure items are displayed
+      item.classList.add('media-visible'); // Apply fadeIn animation
+    });
+    toggleButton.textContent = 'Minder bekijken'; // Change button text
+  }
+
+  isVisible = !isVisible; // Toggle visibility state
+});

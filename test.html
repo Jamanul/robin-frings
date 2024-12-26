@@ -4,42 +4,255 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
+    <link rel="stylesheet" href="./public/css/custom/main.css">
+    <link rel="stylesheet" href="./public/css/lib/bootstrap-5-2-3.min.css">
+    <script src="
+    https://cdn.jsdelivr.net/npm/@studio-freight/lenis@1.0.42/dist/lenis.min.js
+    "></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+    <script src="./public/css/lib/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="https://unpkg.com/split-type"></script>
     <style>
-@keyframes slideUp {
-  from {
-    height: 100px; /* Initial height */
-    opacity: 1;    /* Fully visible */
-  }
-  to {
-    height: 0;    /* Collapse to 0 */
-    opacity: 0;   /* Fully transparent */
-  }
-}
+      @keyframes slideUp {
+        from {
+          height: 100px; /* Initial height */
+          opacity: 1; /* Fully visible */
+        }
+        to {
+          height: 0; /* Collapse to 0 */
+          opacity: 0; /* Fully transparent */
+        }
+      }
+      .div {
+        height: 100vh;
+      }
+      .container {
+        overflow: hidden; /* Ensure no overflow is visible */
+      }
 
-.container {
-  overflow: hidden; /* Ensure no overflow is visible */
-}
-
-.hidden {
-  animation: slideUp 0.5s ease forwards; /* Apply the slide-up animation */
-}
+      .hidden {
+        animation: slideUp 0.5s ease forwards; /* Apply the slide-up animation */
+      }
     </style>
   </head>
   <body>
-    <div class="container">
-      <div class="content">
-        <p>This is some content that will be hidden smoothly.</p>
-      </div>
-    </div>
-    <button id="hide-button">Hide</button>
-    <script>
-      // Array of video sources
-      const hideButton = document.getElementById('hide-button');
-const container = document.querySelector('.container');
+    <section class="div ">
+      <section class="hero-section gsap-container">
+        <div class="container relative">
+          <div class="hero-wrapper">
+            <h1 class="text-white wm-h-1">Robin Frings</h1>
+            <p class="wm-text-md hero-description">
+              Robin Frings, acteur, content creator en bekend van NPO Zappelin,
+              Alleskunner VIPS en Buenas Chicas.
+            </p>
+            <div class="d-flex gap-4">
+              <div class="d-flex align-items-center gap-2">
+                <img src="./public/icons/instragram.svg" alt="instragram" />
+                <p>@robinfrings</p>
+              </div>
+              <div class="d-flex align-items-center gap-2">
+                <img src="./public/icons/tik-tok.svg" alt="tik-tok" />
+                <p>@robinfrings1</p>
+              </div>
+            </div>
+          </div>
+          <div class="hero-image">
+            <img src="./public/images/header-foto.png" alt="protrait" />
+          </div>
+        </div>
+        <!-- yellow slider -->
+        <!-- infinite left to right slider -->
+        <div class="slider-conatiner d-flex">
+          <div class="slider d-flex">
+            <div class="slider-element d-flex align-items-center">
+              <div>
+                <p class="slider-title wm-text-xl">@ROBINFRINGS</p>
+              </div>
+              <div style="gap: 15px" class="d-flex">
+                <p class="slider-title wm-text-xl">VOLG MIJ OP:</p>
+                <img src="./public/icons/instragram-black.svg" alt="" />
+                <img src="./public/icons/tiktok-black.svg" alt="tik-tok" />
+              </div>
+            </div>
+            <div class="slider-element d-flex align-items-center">
+              <div>
+                <p class="slider-title wm-text-xl">@ROBINFRINGS</p>
+              </div>
+              <div style="gap: 15px" class="d-flex">
+                <p class="slider-title wm-text-xl">VOLG MIJ OP:</p>
+                <img src="./public/icons/instragram-black.svg" alt="" />
+                <img src="./public/icons/tiktok-black.svg" alt="tik-tok" />
+              </div>
+            </div>
+            <div class="slider-element d-flex align-items-center">
+              <div>
+                <p class="slider-title wm-text-xl">@ROBINFRINGS</p>
+              </div>
+              <div style="gap: 15px" class="d-flex">
+                <p class="slider-title wm-text-xl">VOLG MIJ OP:</p>
+                <img src="./public/icons/instragram-black.svg" alt="" />
+                <img src="./public/icons/tiktok-black.svg" alt="tik-tok" />
+              </div>
+            </div>
+            <div class="slider-element d-flex align-items-center">
+              <div>
+                <p class="slider-title wm-text-xl">@ROBINFRINGS</p>
+              </div>
+              <div style="gap: 15px" class="d-flex">
+                <p class="slider-title wm-text-xl">VOLG MIJ OP:</p>
+                <img src="./public/icons/instragram-black.svg" alt="" />
+                <img src="./public/icons/tiktok-black.svg" alt="tik-tok" />
+              </div>
+            </div>
+            <div class="slider-element d-flex align-items-center">
+              <div>
+                <p class="slider-title wm-text-xl">@ROBINFRINGS</p>
+              </div>
+              <div style="gap: 15px" class="d-flex">
+                <p class="slider-title wm-text-xl">VOLG MIJ OP:</p>
+                <img src="./public/icons/instragram-black.svg" alt="" />
+                <img src="./public/icons/tiktok-black.svg" alt="tik-tok" />
+              </div>
+            </div>
+            <div class="slider-element d-flex align-items-center">
+              <div>
+                <p class="slider-title wm-text-xl">@ROBINFRINGS</p>
+              </div>
+              <div style="gap: 15px" class="d-flex">
+                <p class="slider-title wm-text-xl">VOLG MIJ OP:</p>
+                <img src="./public/icons/instragram-black.svg" alt="" />
+                <img src="./public/icons/tiktok-black.svg" alt="tik-tok" />
+              </div>
+            </div>
+            <div class="slider-element d-flex align-items-center">
+              <div>
+                <p class="slider-title wm-text-xl">@ROBINFRINGS</p>
+              </div>
+              <div style="gap: 15px" class="d-flex">
+                <p class="slider-title wm-text-xl">VOLG MIJ OP:</p>
+                <img src="./public/icons/instragram-black.svg" alt="" />
+                <img src="./public/icons/tiktok-black.svg" alt="tik-tok" />
+              </div>
+            </div>
+            <div class="slider-element d-flex align-items-center">
+              <div>
+                <p class="slider-title wm-text-xl">@ROBINFRINGS</p>
+              </div>
+              <div style="gap: 15px" class="d-flex">
+                <p class="slider-title wm-text-xl">VOLG MIJ OP:</p>
+                <img src="./public/icons/instragram-black.svg" alt="" />
+                <img src="./public/icons/tiktok-black.svg" alt="tik-tok" />
+              </div>
+            </div>
+          </div>
+          <div class="slider d-flex">
+            <div class="slider-element d-flex align-items-center">
+              <div>
+                <p class="slider-title wm-text-xl">@ROBINFRINGS</p>
+              </div>
+              <div style="gap: 15px" class="d-flex">
+                <p class="slider-title wm-text-xl">VOLG MIJ OP:</p>
+                <img src="./public/icons/instragram-black.svg" alt="" />
+                <img src="./public/icons/tiktok-black.svg" alt="tik-tok" />
+              </div>
+            </div>
+            <div class="slider-element d-flex align-items-center">
+              <div>
+                <p class="slider-title wm-text-xl">@ROBINFRINGS</p>
+              </div>
+              <div style="gap: 15px" class="d-flex">
+                <p class="slider-title wm-text-xl">VOLG MIJ OP:</p>
+                <img src="./public/icons/instragram-black.svg" alt="" />
+                <img src="./public/icons/tiktok-black.svg" alt="tik-tok" />
+              </div>
+            </div>
+            <div class="slider-element d-flex align-items-center">
+              <div>
+                <p class="slider-title wm-text-xl">@ROBINFRINGS</p>
+              </div>
+              <div style="gap: 15px" class="d-flex">
+                <p class="slider-title wm-text-xl">VOLG MIJ OP:</p>
+                <img src="./public/icons/instragram-black.svg" alt="" />
+                <img src="./public/icons/tiktok-black.svg" alt="tik-tok" />
+              </div>
+            </div>
+            <div class="slider-element d-flex align-items-center">
+              <div>
+                <p class="slider-title wm-text-xl">@ROBINFRINGS</p>
+              </div>
+              <div style="gap: 15px" class="d-flex">
+                <p class="slider-title wm-text-xl">VOLG MIJ OP:</p>
+                <img src="./public/icons/instragram-black.svg" alt="" />
+                <img src="./public/icons/tiktok-black.svg" alt="tik-tok" />
+              </div>
+            </div>
+            <div class="slider-element d-flex align-items-center">
+              <div>
+                <p class="slider-title wm-text-xl">@ROBINFRINGS</p>
+              </div>
+              <div style="gap: 15px" class="d-flex">
+                <p class="slider-title wm-text-xl">VOLG MIJ OP:</p>
+                <img src="./public/icons/instragram-black.svg" alt="" />
+                <img src="./public/icons/tiktok-black.svg" alt="tik-tok" />
+              </div>
+            </div>
+            <div class="slider-element d-flex align-items-center">
+              <div>
+                <p class="slider-title wm-text-xl">@ROBINFRINGS</p>
+              </div>
+              <div style="gap: 15px" class="d-flex">
+                <p class="slider-title wm-text-xl">VOLG MIJ OP:</p>
+                <img src="./public/icons/instragram-black.svg" alt="" />
+                <img src="./public/icons/tiktok-black.svg" alt="tik-tok" />
+              </div>
+            </div>
+            <div class="slider-element d-flex align-items-center">
+              <div>
+                <p class="slider-title wm-text-xl">@ROBINFRINGS</p>
+              </div>
+              <div style="gap: 15px" class="d-flex">
+                <p class="slider-title wm-text-xl">VOLG MIJ OP:</p>
+                <img src="./public/icons/instragram-black.svg" alt="" />
+                <img src="./public/icons/tiktok-black.svg" alt="tik-tok" />
+              </div>
+            </div>
+            <div class="slider-element d-flex align-items-center">
+              <div>
+                <p class="slider-title wm-text-xl">@ROBINFRINGS</p>
+              </div>
+              <div style="gap: 15px" class="d-flex">
+                <p class="slider-title wm-text-xl">VOLG MIJ OP:</p>
+                <img src="./public/icons/instragram-black.svg" alt="" />
+                <img src="./public/icons/tiktok-black.svg" alt="tik-tok" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      
+    </section>
+      <section class="div ">div-2</section>
 
-hideButton.addEventListener('click', () => {
-  container.classList.add('hidden'); // Add the class to collapse the container
-});
+      <section class="div ">div-3</section>
+    <section class="div ">div-4
+      <p class="counter-dsc">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim delectus
+        similique ipsa. Labore non quasi tempore debitis nam laborum hic
+        molestias, quo quibusdam laboriosam consectetur eveniet quos repudiandae
+        fugiat corporis nisi animi? Iure laudantium provident reiciendis, quam
+    
+      </p>
+    </section>
+    <section class=""></section>
+    <script>
+      // Apply explicit styling
+
+
+
+
+
     </script>
   </body>
 </html>

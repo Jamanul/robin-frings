@@ -1,0 +1,23 @@
+:root {
+    /* Colors variable */
+    --background-dark: #090909;
+    --black: #010101;
+    --secondary-color: #42a5f5;
+    --white: #ffffff;
+    --light-gray: #d8d8d8;
+    /* font family variable */
+  
+    --font-1: "Inter Display";
+    --font-2: ;
+    --font-3: ;
+    --font-body: "DM Sans", serif;
+  
+    /* UI element  variable */
+  }
+
+  .media-about-section {
+    margin: 140px auto !important;
+  }
+  .media-social-section{
+    margin: 0px auto 140px auto !important;
+  }
