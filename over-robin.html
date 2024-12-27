@@ -55,8 +55,8 @@
       <!-- hero section -->
       <section class="hero-section gsap-container">
         <div class="container relative">
-          <div class="hero-wrapper ">
-            <h1 class="text-white wm-h-1 text-reveal">Robin Frings</h1>
+          <div class="hero-wrapper-secondary ">
+            <h1 class="text-white wm-h-2 text-reveal page=title">Over Robin Frings</h1>
             <p class="wm-text-md hero-description text-reveal">
               Robin Frings, acteur, content creator en bekend van NPO Zappelin,
               Alleskunner VIPS en Buenas Chicas.
@@ -72,8 +72,8 @@
               </div>
             </div>
           </div>
-          <div class="hero-image">
-            <img src="./public/images/header-foto.png" alt="protrait" />
+          <div class="over-image">
+            <img src="./public/images/over.png" alt="protrait" />
           </div>
         </div>
         <!-- yellow slider -->
@@ -989,7 +989,7 @@
         });
       });
 
-      gsap.to(".hero-image img", {
+      gsap.to(".over-image img", {
         y: -50, // Move the image up by 50px
         ease: "power2.out", // Smoother easing
         scrollTrigger: {

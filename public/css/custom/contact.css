@@ -1,0 +1,51 @@
+:root {
+    /* Colors variable */
+    --background-dark: #090909;
+    --black: #010101;
+    --secondary-color: #42a5f5;
+    --white: #ffffff;
+    --light-gray: #d8d8d8;
+    --gray:#B5B5B5;
+    --lighter-gray:#303030;
+    /* font family variable */
+  
+    --font-1: "Inter Display";
+    --font-2: ;
+    --font-3: ;
+    --font-body: "DM Sans", serif;
+  
+    /* UI element  variable */
+  }
+
+  .form-section{
+    margin:140px auto !important;
+  }
+  .form-button-container{
+    margin-bottom: 140px !important;
+  }
+  .form-button{
+    padding: 16px 24px !important;
+    border-radius: 100px;
+border: 1px solid var(--white);
+background-color: transparent;
+color: var(--white);
+  }
+  .form-label{
+    color: var(--gray);
+  }
+  .form-input{
+    background: transparent !important;
+    border: none !important;
+    border-bottom: 1px solid var(--lighter-gray) !important;
+    outline: none; /* Removes the default focus outline */
+    transition: border-color 0.3s ease; /* Smooth transition for border color */
+    color: var(--light-gray);
+  }
+  .form-input:focus {
+    border-bottom: 1px solid #FEC301 !important; /* Change bottom border color on focus */
+  }
+  .form-wrapper{
+    max-width: 816px ;
+    margin: 0px auto !important;
+  }
+  

@@ -1,39 +1,39 @@
 :root {
-    /* Colors variable */
-    --background-dark: #090909;
-    --black: #010101;
-    --secondary-color: #42a5f5;
-    --white: #ffffff;
-    --light-gray: #d8d8d8;
-    /* font family variable */
-  
-    --font-1: "Inter Display";
-    --font-2: ;
-    --font-3: ;
-    --font-body: "DM Sans", serif;
-  
-    /* UI element  variable */
-  }
+  /* Colors variable */
+  --background-dark: #090909;
+  --black: #010101;
+  --secondary-color: #42a5f5;
+  --white: #ffffff;
+  --light-gray: #d8d8d8;
+  /* font family variable */
 
-  .stacking-card-section{
-    margin: 140px auto !important;
-  }
-  .stacking-card-dsc{
-    color: var(--light-gray);
-  }
-  .stacking-card{
-    top: 30px;
-    position: sticky;
-    padding: 40px !important;
-    margin-bottom: 20px !important;
-    background-color: var(--background-dark);
+  --font-1: "Inter Display";
+  --font-2: ;
+  --font-3: ;
+  --font-body: "DM Sans", serif;
+
+  /* UI element  variable */
 }
-.stacking-card img{
-    width: 100% !important;
+
+.stacking-card-section {
+  margin: 140px auto !important;
 }
-.stacking-card h2{
-    position: relative !important;
-    left: -150px;
+.stacking-card-dsc {
+  color: var(--light-gray);
+}
+.stacking-card {
+  top: 30px;
+  position: sticky;
+  padding: 40px !important;
+  margin-bottom: 20px !important;
+  background-color: var(--background-dark);
+}
+.stacking-card img {
+  width: 100% !important;
+}
+.stacking-card h2 {
+  position: relative !important;
+  left: -150px;
 }
 /* .stacking-card:nth-child(2) {
     top: 100px; 
@@ -59,27 +59,33 @@
 .stacking-card:nth-child(9){
     top: 380px;
 } */
-.dark-overlay{
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.4);
+.dark-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.4);
 }
-.over-contact-section{
-    margin: 140px auto !important;
+.over-contact-section {
+  margin: 140px auto !important;
 }
-.over-dsc{
-    color: var(--light-gray);
+.over-dsc {
+  color: var(--light-gray);
 }
-.over-contact-card{
-    margin-top: 80px !important;
+.over-contact-card {
+  margin-top: 80px !important;
 }
-.over-contact-card img{
-    width: 100% !important;
+.over-contact-card img {
+  width: 100% !important;
 }
-.over-contact-card h2{
-    position: relative !important;
-    left: -150px;
+.over-contact-card h2 {
+  position: relative !important;
+  left: -150px;
+}
+.over-image {
+  position: absolute !important;
+  top: -433px;
+  right: 0;
+  z-index: -1;
 }

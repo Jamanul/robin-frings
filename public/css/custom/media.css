@@ -21,3 +21,9 @@
   .media-social-section{
     margin: 0px auto 140px auto !important;
   }
+  .media-image {
+    top: -382px;
+    right: 0px;
+    z-index: -1;
+    position: absolute !important;
+}

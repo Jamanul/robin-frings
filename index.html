@@ -48,11 +48,32 @@
             </li>
           </ul>
         </div>
-      </nav>
+      </nav>   
+      <div class="special-button-container d-flex flex-column align-items-end">
+        <div id="special-top-div" class="d-flex gap-5 py-2 py-md-3 special-button-top-div px-md-4 align-items-center">
+            <button id="special-button" class="special-button">
+                <img src="./public/icons/visibility.svg" alt="">
+            </button>
+            <p>Toegankelijkheid</p>
+        </div>
+        <div id="special-bottom-div" class="special-button-div">
+            <ul>
+                <li id="increase-font" class="special-li gap-2 d-flex align-items-center "><img src="./public/icons/tt-black.svg" alt="tt">Tekst vergroten</li>
+                <li id="decrease-font" class="special-li gap-2 d-flex align-items-center "><img src="./public/icons/tt-black.svg" alt="tt">Tekst verkleinen</li>
+                <li id="toggle-grayscale" class="special-li gap-2 d-flex align-items-center "><img src="./public/icons/barcode.svg" alt="bar">Grijswaarden</li>
+                <li id="toggle-contrast" class="special-li gap-2 d-flex align-items-center "><img src="./public/icons/contrast.svg" alt="con">Hoog contrast</li>
+                <li id="toggle-negative">Negative</li>
+                <li>show link underline</li>
+                <li>lees bar letter type</li>
+                <li>clear all</li>
+            </ul>
+        </div>
+      </div>
     </header>
     <main>
       <!-- hero section -->
       <section class="hero-section gsap-container">
+     
         <div class="container relative">
           <div class="hero-wrapper ">
             <h1 class="text-white wm-h-1 text-reveal">Robin Frings</h1>
@@ -1188,7 +1209,7 @@
 
       //   Handle Lenis scroll events
       lenis.on("scroll", (e) => {
-        console.log("Scroll event:", e); // Log scroll details
+        // console.log("Scroll event:", e); // Log scroll details
       });
 
       // Request animation frame for smooth scrolling
@@ -1220,7 +1241,7 @@
       });
 
       gsap.to(".hero-image img", {
-        y: -80, // Move the image up by 50px
+        y: -50, // Move the image up by 50px
         ease: "power2.out", // Smoother easing
         scrollTrigger: {
           trigger: ".container",

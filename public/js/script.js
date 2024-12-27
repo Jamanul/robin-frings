@@ -263,6 +263,111 @@ toggleButton.addEventListener('click', () => {
     });
     toggleButton.textContent = 'Minder bekijken'; // Change button text
   }
-
   isVisible = !isVisible; // Toggle visibility state
 });
+
+
+const specialButton= document.getElementById("special-button")
+const specialTopDiv= document.getElementById("special-top-div")
+const specialBottomDiv= document.getElementById("special-bottom-div")
+let buttonShow = true;
+function showContainer (){
+  if(buttonShow){
+    specialTopDiv.classList.remove("special-button-traslate-180")
+    specialBottomDiv.classList.remove("special-button-traslate-180")
+  }
+  else{
+    specialTopDiv.classList.add("special-button-traslate-180")
+    specialBottomDiv.classList.add("special-button-traslate-180")
+  }
+  buttonShow = !buttonShow
+  
+}
+specialButton.addEventListener("click",()=>showContainer())
+showContainer ();
+
+let n = 0;
+
+function increaseFontSize() {
+  if(n<=2){
+    n++;
+    console.log(n)
+  }
+  
+  if (n <= 2) 
+  {const tags = ["p", "h1", "h2","span"];
+
+  tags.forEach((tag) => {
+    const elements = document.getElementsByTagName(tag); // Get all elements of this tag
+    for (let element of elements) {
+      const computedStyle = window.getComputedStyle(element); // Get computed styles
+      const fontSize = parseFloat(computedStyle.fontSize); // Get numeric font size
+      if (fontSize) {
+        element.style.fontSize = `${fontSize *1.1}px`; // Increase font size by 2px
+      }
+    }
+  });
+}
+}
+function decreaseFontSize() {
+  if(n>= -2){
+    n--;
+    console.log(n)
+  }
+  if (n <= -3) return; // Limit the number of increases to 2
+
+  // List of specific tags to adjust
+  const tags = ["p", "h1", "h2","span"];
+
+  tags.forEach((tag) => {
+    const elements = document.getElementsByTagName(tag); // Get all elements of this tag
+    for (let element of elements) {
+      const computedStyle = window.getComputedStyle(element); // Get computed styles
+      const fontSize = parseFloat(computedStyle.fontSize); // Get numeric font size
+      if (fontSize) {
+        element.style.fontSize = `${fontSize /1.1}px`; // Increase font size by 2px
+      }
+    }
+  });
+}
+// console.log(n)
+let isHighContrast = false; // State to track contrast
+function toggleContrast() {
+  if (!isHighContrast) {
+    // Enable high contrast
+    // Enable high contrast
+    document.body.style.setProperty("background-color", "black", "important");
+    document.body.style.setProperty("color", "#090909", "important");
+    document.body.style.setProperty("filter", "contrast(1.5)", "important");
+  } else {
+    // Reset to default
+    document.body.style.setProperty("background-color", "#090909", "important");
+    document.body.style.setProperty("color", "black", "important");
+    document.body.style.setProperty("filter", "contrast(1)", "important");
+  }
+  isHighContrast = !isHighContrast; // Toggle state
+}
+let isGrayscale = false; // State to track grayscale mode
+
+function toggleGrayscale() {
+  if (!isGrayscale) {
+    // Apply grayscale
+    document.body.style.filter = "grayscale(100%)";
+  } else {
+    // Remove grayscale
+    document.body.style.filter = "none";
+  }
+  isGrayscale = !isGrayscale; // Toggle state
+}
+let isNegative = false; // State to track negative mode
+function toggleNegative() {
+  document.body.classList.toggle('negative', isNegative);
+  isNegative = !isNegative;
+}
+
+// Add click event to the button
+document.getElementById("increase-font").addEventListener("click", increaseFontSize);
+document.getElementById("decrease-font").addEventListener("click", decreaseFontSize);
+document.getElementById("toggle-contrast").addEventListener("click", toggleContrast);
+document.getElementById("toggle-grayscale").addEventListener("click", toggleGrayscale);
+document.getElementById("toggle-negative").addEventListener("click", toggleNegative);

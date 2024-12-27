@@ -20,12 +20,18 @@
   --font-2: ;
   --font-3: ;
   --font-body: "DM Sans", serif;
-
   /* UI element  variable */
 }
 html, body {
   height: 100%;
   scroll-behavior: auto !important ;
+  transition: filter 1s ease;
+  transition: background-color 1s ease;
+  /* overflow-x: hidden; */
+}
+.negative {
+  filter: invert(100%); /* Invert colors */
+  overflow-x: hidden;
 }
 body {
   font-family: var(--font-body) !important;
@@ -40,7 +46,7 @@ ul {
   margin: 0 !important; /* Removes default margin */
 }
 p,
-h2 {
+h2,label {
   margin: 0px !important;
 }
 h1 {
@@ -127,10 +133,43 @@ a {
   display: none !important;
 }
 /* main css */
+.special-button-container {
+  position: fixed !important;
+  top: 213px;
+  right: 0px;
+  z-index: 100000;
+  color: var(--black);
+}
+.special-button-top-div{
+  border-radius: 100px 0px 0px 100px !important;
+  background:var(--white);
+  transition: translate 0.5s ease;
+  translate: 180px 0px;
+}
+.special-button-div{
+  max-width: 189px !important;
+  background:var(--white);
+  transition: translate 0.5s ease;
+  translate: 300px 0px;
+  }
+.special-button-traslate-180{
+  translate: 0px 0px;
+}
+.special-button{
+  background-color: transparent;
+  border: none;
+  padding: 0px !important;
+}
+
+.special-li{
+  padding: 12px 24px !important;
+  color: var(--black);
+}
 .nav-link {
     text-decoration: none;
     position: relative !important;
     transition: color 0.3s ease;
+    
   }
   
   .nav-link:hover {
@@ -157,6 +196,9 @@ a {
   }
 .navbar {
   padding: 32px 0px !important;
+  z-index: 100;
+  position: relative;
+  background-color: transparent;
 }
 .nav-links {
   gap: 32px;
@@ -165,20 +207,27 @@ a {
   padding: 16px 24px !important;
   border-radius: 100px;
   border: 1px solid #fff;
-  background-color: transparent;
+  background-color: transparent !important;
 }
 .relative {
   position: relative !important;
 }
 .hero-wrapper {
-  max-width: 775px !important;
+
   margin: 217px auto 190px 0px !important;
+  overflow: hidden;
+}
+.hero-wrapper-secondary {
+  margin: 320px auto 200px 0px !important;
   overflow: hidden;
 }
 .hero-section{
   position: relative;
-  overflow: visible; /* Allow overflow initially */
+ overflow: visible;
   clip-path: inset(-100% -100% 0px -100%); /* Hide bottom overflow by 50px */
+}
+.page-title{
+  font-weight: 500 !important;
 }
 .hero-description {
   color: var(--light-gray);
@@ -187,8 +236,8 @@ a {
 }
 .hero-image {
   position: absolute !important;
-  top: -200px;
-  right: -150px;
+  top: -339px;
+  right: 19px;
   z-index: -1;
 }
 .slider-conatiner {
