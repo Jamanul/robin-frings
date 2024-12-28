@@ -15,7 +15,6 @@
   --white: #ffffff;
   --light-gray: #d8d8d8;
   /* font family variable */
-
   --font-1: "Inter", serif;
   --font-2: ;
   --font-3: ;
@@ -29,6 +28,11 @@ html, body {
   transition: background-color 1s ease;
   /* overflow-x: hidden; */
 }
+.light {
+  background: var(--white) !important;
+  color: var(--black) !important;
+}
+
 .negative {
   filter: invert(100%); /* Invert colors */
   overflow-x: hidden;
@@ -41,8 +45,9 @@ html, body {
 }
 .high-contrast {
   background-color: black !important; /* High contrast background */
-  color: #090909 !important; /* High contrast text color */
-  filter: contrast(1.5) !important; /* Increase contrast */
+  color: var(--white) !important;
+  filter: contrast(1.5) !important; /* Increase contrast */ 
+  position: relative !important;
 }
 .underline {
   text-decoration: underline !important;
@@ -53,7 +58,10 @@ body {
   box-sizing: border-box;
   color: var(--white) !important;
 }
-
+.light-button{
+  color:#010101 !important;
+  border: 1px solid #999 !important;
+}
 ul {
   list-style-type: none; /* Removes bullets */
   padding: 0 !important; /* Removes default padding */
@@ -154,6 +162,9 @@ a {
   padding: 10px !important;
   border-radius: 8px !important;
 }
+.logo-bg{
+  background-color: #010101;
+}
 .special-button-container {
   position: fixed !important;
   top: 213px;
@@ -228,6 +239,7 @@ a {
   padding: 16px 24px !important;
   border-radius: 100px;
   border: 1px solid #fff;
+  color: var(--white);
   background-color: transparent !important;
 }
 .relative {
@@ -365,6 +377,7 @@ a {
 .slider-image {
   border-radius: 6px;
   z-index: 1;
+  cursor: grabbing;
 }
 
 .swiper-slide-custom {
@@ -614,4 +627,63 @@ bottom: 40px !important;
   color: var(--light-gray);
   padding: 80px 0px !important;
   margin: 0px auto 0px auto !important;
+}
+
+
+
+.loading-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: black; /* Change to your preferred color */
+  z-index: 10000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  visibility: visible; /* Visible by default */
+  opacity: 1;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+/* Fullscreen overlay */
+.spinner-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 10000;
+  visibility: hidden; /* Initially hidden */
+  opacity: 0;
+  transition: visibility 0s, opacity 0.3s ease-in-out;
+}
+
+/* Spinner animation */
+.spinner {
+  border: 8px solid #f3f3f3;
+  border-top: 8px solid #000000;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* Show spinner */
+.spinner-overlay.active {
+  visibility: visible;
+  opacity: 1;
 }

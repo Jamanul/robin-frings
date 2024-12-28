@@ -8,9 +8,12 @@
     <link rel="stylesheet" href="./public/css/custom/responsive.css" />
     <link rel="stylesheet" href="./public/css/lib/bootstrap-5-2-3.min.css" />
     <!-- google fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+      rel="stylesheet"
+    />
     <!-- swiper -->
     <link
       rel="stylesheet"
@@ -23,67 +26,133 @@
   <body>
     <header>
       <nav class="navbar container mx-auto d-flex justify-content-between">
-        <a href="index.html"><img id="logo-img" class="logo-image no-invert" src="./public/images/robin logo 1.png" alt="RF" /></a>
+        <a href="index.html"
+          ><img
+            id="logo-img"
+            class="logo-img no-invert"
+            src="./public/images/robin logo 1.png"
+            alt="RF"
+        /></a>
         <div>
-          <ul
-            class="d-flex nav-links wm-text-normal align-items-center text-white"
-          >
-            <li class="no-invert"><a class="nav-link" href="index.html">Home</a></li>
+          <ul class="d-flex nav-links wm-text-normal align-items-center">
+            <li class="no-invert">
+              <a class="nav-link" href="index.html">Home</a>
+            </li>
             <li class="no-invert">
               <a class="nav-link" href="over-robin.html">Over Robin Frings</a>
             </li>
-            <li class="no-invert"><a class="nav-link" href="media.html">In de media</a></li>
+            <li class="no-invert">
+              <a class="nav-link" href="media.html">In de media</a>
+            </li>
             <li class="">
               <a href="contact.html"
-                ><button
-                  class="nav-button text-white wm-text-normal"
-                  type="button"
-                >
+                ><button class="nav-button wm-text-normal" type="button">
                   Samenwerken?
                 </button></a
               >
             </li>
           </ul>
         </div>
-      </nav>   
+      </nav>
       <div class="special-button-container d-flex flex-column align-items-end">
-        <div id="special-top-div" class="d-flex gap-5 py-2 py-md-3 special-button-top-div px-md-4 align-items-center">
-            <button id="special-button" class="special-button ">
-                <img src="./public/icons/visibility.svg" alt="">
-            </button>
-            <p id="special-text">Toegankelijkheid</p>
+        <div
+          id="special-top-div"
+          class="d-flex gap-5 py-2 py-md-3 special-button-top-div px-md-4 align-items-center"
+        >
+          <button id="special-button" class="special-button">
+            <img src="./public/icons/visibility.svg" alt="" />
+          </button>
+          <p id="special-text">Toegankelijkheid</p>
         </div>
         <div id="special-bottom-div" class="special-button-div">
-            <ul>
-                <li id="increase-font" class="special-li gap-2 d-flex align-items-center "><img src="./public/icons/tt-black.svg" alt="tt">Tekst vergroten</li>
-                <li id="decrease-font" class="special-li gap-2 d-flex align-items-center "><img src="./public/icons/tt-black.svg" alt="tt">Tekst verkleinen</li>
-                <li id="toggle-grayscale" class="special-li gap-2 d-flex align-items-center "><img src="./public/icons/barcode.svg" alt="bar">Grijswaarden</li>
-                <li id="toggle-contrast" class="special-li gap-2 d-flex align-items-center "><img src="./public/icons/contrast.svg" alt="con">Hoog contrast</li>
-                <li id="toggle-negative" class="special-li gap-2 d-flex align-items-center ">Negative</li>
-                <li id="toggle-underline" class="special-li gap-2 d-flex align-items-center ">show link underline</li>
-                <li id="toggle-font" class="special-li gap-2 d-flex align-items-center ">lees bar letter type</li>
-                <li id="clear-all" class="special-li gap-2 d-flex align-items-center ">clear all</li>
-            </ul>
+          <ul>
+            <li
+              id="increase-font"
+              class="special-li gap-2 d-flex align-items-center"
+            >
+              <img src="./public/icons/tt-black.svg" alt="tt" />Tekst vergroten
+            </li>
+            <li
+              id="decrease-font"
+              class="special-li gap-2 d-flex align-items-center"
+            >
+              <img src="./public/icons/tt-black.svg" alt="tt" />Tekst verkleinen
+            </li>
+            <li
+              id="toggle-grayscale"
+              class="special-li gap-2 d-flex align-items-center"
+            >
+              <img src="./public/icons/barcode.svg" alt="bar" />Grijswaarden
+            </li>
+            <li
+              id="toggle-contrast"
+              class="special-li gap-2 d-flex align-items-center"
+            >
+              <img src="./public/icons/contrast.svg" alt="con" />Hoog contrast
+            </li>
+            <li
+              id="toggle-negative"
+              class="special-li gap-2 d-flex align-items-center"
+            >
+              Negative
+            </li>
+            <li
+              id="toggle-underline"
+              class="special-li gap-2 d-flex align-items-center"
+            >
+              show link underline
+            </li>
+            <li
+              id="toggle-theme"
+              class="special-li gap-2 d-flex align-items-center"
+            >
+              Light theme
+            </li>
+            <li
+              id="toggle-font"
+              class="special-li gap-2 d-flex align-items-center"
+            >
+              lees bar letter type
+            </li>
+            <li
+              id="clear-all"
+              class="special-li gap-2 d-flex align-items-center"
+            >
+              clear all
+            </li>
+          </ul>
         </div>
       </div>
     </header>
     <main>
+      <section id="loading-overlay" class="loading-overlay">
+        <div class="spinner"></div>
+        <!-- Optional spinner -->
+      </section>
       <!-- hero section -->
-      <section class="hero-section gsap-container">   
+      <section class="hero-section gsap-container">
         <div class="container relative">
-          <div class="hero-wrapper ">
-            <h1 class="text-white wm-h-1 text-reveal">Robin Frings</h1>
+          <div class="hero-wrapper">
+            <h1 class="wm-h-1 text-reveal">Robin Frings</h1>
             <p class="wm-text-md hero-description text-reveal">
               Robin Frings, acteur, content creator en bekend van NPO Zappelin,
               Alleskunner VIPS en Buenas Chicas.
             </p>
             <div class="d-flex gap-4 text-reveal">
               <div class="d-flex align-items-center gap-2">
-                <img src="./public/icons/instragram.svg" alt="instragram" />
+                <img
+                  class="no-invert"
+                  src="./public/icons/instragram.svg"
+                  alt="instragram"
+                />
                 <p>@robinfrings</p>
               </div>
               <div class="d-flex align-items-center gap-2">
-                <img src="./public/icons/tik-tok.svg" alt="tik-tok" />
+                <img
+                  class="no-invert"
+                  src="./public/icons/tik-tok.svg"
+                  alt="tik-tok"
+                />
                 <p>@robinfrings1</p>
               </div>
             </div>
@@ -288,7 +357,7 @@
           </div>
         </div>
         <div>
-          <button class="nav-button text-white wm-text-normal" type="button">
+          <button class="nav-button wm-text-normal" type="button">
             Meer weten over Robin Frings
           </button>
         </div>
@@ -485,14 +554,14 @@
             <div class="button-holder d-flex">
               <div class="custom-prev">
                 <img
-                  class="arrow"
+                  class="arrow no-invert"
                   src="./public/icons/arrow_forward.svg"
                   alt="prev"
                 />
               </div>
               <div class="custom-next">
                 <img
-                  class="arrow"
+                  class="arrow no-invert"
                   src="./public/icons/arrow_forward (1).svg"
                   alt="next"
                 />
@@ -814,7 +883,7 @@
           >
             <button
               id="toggle-button"
-              class="nav-button text-white wm-text-normal"
+              class="nav-button wm-text-normal"
               type="button"
             >
               Alles bekijken
@@ -827,13 +896,13 @@
             id="controls"
             class="d-flex align-items-center justify-content-center controls-button-container gap-4"
           >
-            <button id="add-more" class="nav-button text-white wm-text-normal">
+            <button id="add-more" class="nav-button wm-text-normal">
               Alles bekijken
             </button>
             <button
               id="remove"
               style="display: none"
-              class="nav-button text-white wm-text-normal"
+              class="nav-button wm-text-normal"
             >
               Minder weergeven
             </button>
@@ -897,14 +966,14 @@
             <div class="button-holder d-flex gap-4">
               <div class="secondary-custom-prev">
                 <img
-                  class="arrow"
+                  class="arrow no-invert"
                   src="./public/icons/arrow_forward.svg"
                   alt="prev"
                 />
               </div>
               <div class="secondary-custom-next">
                 <img
-                  class="arrow"
+                  class="arrow no-invert"
                   src="./public/icons/arrow_forward (1).svg"
                   alt="next"
                 />
@@ -931,7 +1000,7 @@
               contact op via onderstaande knop.
             </p>
             <div>
-              <button class="nav-button text-white button-margin" type="button">
+              <button class="nav-button button-margin" type="button">
                 Contact Robin Frings
               </button>
             </div>
@@ -1247,20 +1316,20 @@
         },
       });
       window.addEventListener("load", () => {
-      gsap.fromTo(
-        ".text-reveal",
-        { y: 350, opacity: 0 }, // Start position and opacity
-        {
-          y: 0, // End position
-          opacity: 1, // End opacity
-          duration: 1.5, // Animation duration
-          ease: "power2.out", // Smooth easing
-          onComplete: () => {
-            console.log("Animation Complete"); // Optional: Confirm animation is done
-          },
-        }
-      );
-    });
+        gsap.fromTo(
+          ".text-reveal",
+          { y: 350, opacity: 0 }, // Start position and opacity
+          {
+            y: 0, // End position
+            opacity: 1, // End opacity
+            duration: 1.5, // Animation duration
+            ease: "power2.out", // Smooth easing
+            onComplete: () => {
+              console.log("Animation Complete"); // Optional: Confirm animation is done
+            },
+          }
+        );
+      });
     </script>
 
     <script>
@@ -1272,6 +1341,10 @@
         navigation: {
           nextEl: ".custom-next", // Attach your custom buttons
           prevEl: ".custom-prev",
+        },
+        pagination: {
+          el: ".swiper-pagination",
+          clickable: true,
         },
         breakpoints: {
           // when window width is >= 320px
