@@ -8,12 +8,9 @@
     <link rel="stylesheet" href="./public/css/custom/responsive.css" />
     <link rel="stylesheet" href="./public/css/lib/bootstrap-5-2-3.min.css" />
     <!-- google fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap"
-      rel="stylesheet"
-    />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
     <!-- swiper -->
     <link
       rel="stylesheet"
@@ -26,17 +23,17 @@
   <body>
     <header>
       <nav class="navbar container mx-auto d-flex justify-content-between">
-        <a href="index.html"><img src="./public/images/robin logo 1.png" alt="RF" /></a>
+        <a href="index.html"><img id="logo-img" class="logo-image no-invert" src="./public/images/robin logo 1.png" alt="RF" /></a>
         <div>
           <ul
             class="d-flex nav-links wm-text-normal align-items-center text-white"
           >
-            <li><a class="nav-link" href="index.html">Home</a></li>
-            <li>
+            <li class="no-invert"><a class="nav-link" href="index.html">Home</a></li>
+            <li class="no-invert">
               <a class="nav-link" href="over-robin.html">Over Robin Frings</a>
             </li>
-            <li><a class="nav-link" href="media.html">In de media</a></li>
-            <li>
+            <li class="no-invert"><a class="nav-link" href="media.html">In de media</a></li>
+            <li class="">
               <a href="contact.html"
                 ><button
                   class="nav-button text-white wm-text-normal"
@@ -51,10 +48,10 @@
       </nav>   
       <div class="special-button-container d-flex flex-column align-items-end">
         <div id="special-top-div" class="d-flex gap-5 py-2 py-md-3 special-button-top-div px-md-4 align-items-center">
-            <button id="special-button" class="special-button">
+            <button id="special-button" class="special-button ">
                 <img src="./public/icons/visibility.svg" alt="">
             </button>
-            <p>Toegankelijkheid</p>
+            <p id="special-text">Toegankelijkheid</p>
         </div>
         <div id="special-bottom-div" class="special-button-div">
             <ul>
@@ -62,18 +59,17 @@
                 <li id="decrease-font" class="special-li gap-2 d-flex align-items-center "><img src="./public/icons/tt-black.svg" alt="tt">Tekst verkleinen</li>
                 <li id="toggle-grayscale" class="special-li gap-2 d-flex align-items-center "><img src="./public/icons/barcode.svg" alt="bar">Grijswaarden</li>
                 <li id="toggle-contrast" class="special-li gap-2 d-flex align-items-center "><img src="./public/icons/contrast.svg" alt="con">Hoog contrast</li>
-                <li id="toggle-negative">Negative</li>
-                <li>show link underline</li>
-                <li>lees bar letter type</li>
-                <li>clear all</li>
+                <li id="toggle-negative" class="special-li gap-2 d-flex align-items-center ">Negative</li>
+                <li id="toggle-underline" class="special-li gap-2 d-flex align-items-center ">show link underline</li>
+                <li id="toggle-font" class="special-li gap-2 d-flex align-items-center ">lees bar letter type</li>
+                <li id="clear-all" class="special-li gap-2 d-flex align-items-center ">clear all</li>
             </ul>
         </div>
       </div>
     </header>
     <main>
       <!-- hero section -->
-      <section class="hero-section gsap-container">
-     
+      <section class="hero-section gsap-container">   
         <div class="container relative">
           <div class="hero-wrapper ">
             <h1 class="text-white wm-h-1 text-reveal">Robin Frings</h1>

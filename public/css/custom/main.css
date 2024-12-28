@@ -16,7 +16,7 @@
   --light-gray: #d8d8d8;
   /* font family variable */
 
-  --font-1: "Inter Display";
+  --font-1: "Inter", serif;
   --font-2: ;
   --font-3: ;
   --font-body: "DM Sans", serif;
@@ -32,6 +32,20 @@ html, body {
 .negative {
   filter: invert(100%); /* Invert colors */
   overflow-x: hidden;
+}
+.negative-invert {
+  filter: invert(100%); /* Invert colors */
+}
+.grayscale-100{
+  filter: grayscale(100%);
+}
+.high-contrast {
+  background-color: black !important; /* High contrast background */
+  color: #090909 !important; /* High contrast text color */
+  filter: contrast(1.5) !important; /* Increase contrast */
+}
+.underline {
+  text-decoration: underline !important;
 }
 body {
   font-family: var(--font-body) !important;
@@ -132,7 +146,14 @@ a {
 .hidden{
   display: none !important;
 }
+.font-inter {
+  font-family: "Inter", serif !important;
+}
 /* main css */
+.logo-img{
+  padding: 10px !important;
+  border-radius: 8px !important;
+}
 .special-button-container {
   position: fixed !important;
   top: 213px;
@@ -147,7 +168,7 @@ a {
   translate: 180px 0px;
 }
 .special-button-div{
-  max-width: 189px !important;
+  max-width: 220px !important;
   background:var(--white);
   transition: translate 0.5s ease;
   translate: 300px 0px;
@@ -162,7 +183,7 @@ a {
 }
 
 .special-li{
-  padding: 12px 24px !important;
+  padding: 12px 24px 2px 24px !important;
   color: var(--black);
 }
 .nav-link {
@@ -591,5 +612,6 @@ bottom: 40px !important;
 }
 .footer{
   color: var(--light-gray);
-  margin: 80px auto !important;
+  padding: 80px 0px !important;
+  margin: 0px auto 0px auto !important;
 }
