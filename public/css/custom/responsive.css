@@ -1,0 +1,82 @@
+@media only screen and (max-width: 600px) {
+    .wm-h-1 {
+        font-size: 48px;
+        line-height: 60px;
+      }
+      .wm-h-2 {
+        font-size: 72px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 90px;
+      }
+      .wm-h-3 {
+        font-weight: 700;
+        font-size: 32px;
+        line-height: 48px;
+      }
+      .wm-h-4 {
+        font-weight: 700;
+        font-size: 24px;
+        line-height: 36px;
+      }
+      .wm-text-xxl {
+        font-size: 36px;
+        font-weight: 400;
+        line-height: 54px;
+      }
+      .wm-text-xl {
+        font-size: 24px;
+        font-weight: 700;
+        line-height: 32px;
+      }
+      
+      .wm-text-lg {
+        font-weight: 400;
+        font-size: 20px;
+        line-height: 34px;
+      }
+      .wm-text-md {
+        font-size: 18px;
+        font-weight: 400;
+        line-height: 28px;
+      }
+      .wm-text-normal {
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 24px;
+      }
+      .wm-text-sm {
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 20px;
+      }
+      .wm-text-xs {
+        font-weight: 500;
+        font-size: 12px;
+        line-height: 24px;
+      }
+    .responsive-hide{
+        display: none !important;
+    }
+    .responsive-block {
+        display: flex !important;
+    }
+    .navbar{
+        padding: 6px 0px !important;
+    }
+    
+    .logo-img{
+        height: 60px;
+        width: 60px;
+    }
+    .responsive-hero-width{
+        width: 150%;
+    }
+    .hero-image {
+        top: 0px;
+        right: 0px;
+    }
+    .hero-wrapper{
+        margin: 250px 0px 121px 0px !important;
+    }
+}

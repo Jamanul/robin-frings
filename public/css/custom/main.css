@@ -28,6 +28,17 @@ html, body {
   transition: background-color 1s ease;
   /* overflow-x: hidden; */
 }
+.font-black{
+  color: var(--black) !important;
+  background-color: white !important;
+}
+
+.font-black svg path {
+  fill: black !important; 
+}
+.fix-svg svg path{
+  fill: white ;
+}
 .light {
   background: var(--white) !important;
   color: var(--black) !important;
@@ -708,4 +719,12 @@ bottom: 40px !important;
 .spinner-overlay.active {
   visibility: visible;
   opacity: 1;
+}
+
+
+.responsive-hide{
+  display: flex !important;
+}
+.responsive-block {
+  display: none !important;
 }
