@@ -25,23 +25,26 @@
     <header>
       <nav class="navbar container mx-auto d-flex justify-content-between">
         <a href="index.html"
-          ><img src="./public/images/robin logo 1.png" alt="RF"
+          ><img
+            id="logo-img"
+            class="logo-img no-invert"
+            src="./public/images/robin logo 1.png"
+            alt="RF"
         /></a>
         <div>
-          <ul
-            class="d-flex nav-links wm-text-normal align-items-center text-white"
-          >
-            <li><a class="nav-link" href="index.html">Home</a></li>
-            <li>
+          <ul class="d-flex nav-links wm-text-normal align-items-center">
+            <li class="no-invert">
+              <a class="nav-link" href="index.html">Home</a>
+            </li>
+            <li class="no-invert">
               <a class="nav-link" href="over-robin.html">Over Robin Frings</a>
             </li>
-            <li><a class="nav-link" href="media.html">In de media</a></li>
-            <li>
+            <li class="no-invert">
+              <a class="nav-link" href="media.html">In de media</a>
+            </li>
+            <li class="">
               <a href="contact.html"
-                ><button
-                  class="nav-button text-white wm-text-normal"
-                  type="button"
-                >
+                ><button class="nav-button wm-text-normal" type="button">
                   Samenwerken?
                 </button></a
               >
@@ -49,6 +52,336 @@
           </ul>
         </div>
       </nav>
+      <div class="special-button-container d-flex flex-column align-items-end">
+        <div
+          id="special-top-div"
+          class="d-flex gap-5 py-2 py-md-3 special-button-top-div align-items-center"
+        >
+          <button id="special-button" class="special-button">
+            <img src="./public/icons/visibility.svg" alt="" />
+          </button>
+          <p id="special-text">Toegankelijkheid</p>
+        </div>
+        <div id="special-bottom-div" class="special-button-div">
+          <ul>
+            <li
+              id="increase-font"
+              class="special-li gap-2 d-flex align-items-center"
+            >
+              <span>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="20"
+                  height="20"
+                  viewBox="0 0 20 20"
+                  fill="none"
+                >
+                  <mask
+                    id="mask0_1_1428"
+                    style="mask-type: alpha"
+                    maskUnits="userSpaceOnUse"
+                    x="0"
+                    y="0"
+                    width="20"
+                    height="20"
+                  >
+                    <rect width="20" height="20" fill="#D9D9D9" />
+                  </mask>
+                  <g mask="url(#mask0_1_1428)">
+                    <path
+                      d="M12.0114 16.25V5.52079H7.87677V3.75H17.9168V5.52079H13.7822V16.25H12.0114ZM4.56748 16.25V9.6474H2.0835V7.8766H8.81423V9.6474H6.33025V16.25H4.56748Z"
+                      fill="#1C1B1F"
+                    />
+                  </g>
+                </svg>
+              </span>
+              Tekst vergroten
+            </li>
+            <li
+              id="decrease-font"
+              class="special-li gap-2 d-flex align-items-center"
+            >
+              <span>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="20"
+                  height="20"
+                  viewBox="0 0 20 20"
+                  fill="none"
+                >
+                  <mask
+                    id="mask0_1_1428"
+                    style="mask-type: alpha"
+                    maskUnits="userSpaceOnUse"
+                    x="0"
+                    y="0"
+                    width="20"
+                    height="20"
+                  >
+                    <rect width="20" height="20" fill="#D9D9D9" />
+                  </mask>
+                  <g mask="url(#mask0_1_1428)">
+                    <path
+                      d="M12.0114 16.25V5.52079H7.87677V3.75H17.9168V5.52079H13.7822V16.25H12.0114ZM4.56748 16.25V9.6474H2.0835V7.8766H8.81423V9.6474H6.33025V16.25H4.56748Z"
+                      fill="#1C1B1F"
+                    />
+                  </g>
+                </svg>
+              </span>
+              Tekst verkleinen
+            </li>
+            <li
+              id="toggle-grayscale"
+              class="special-li gap-2 d-flex align-items-center"
+            >
+              <span>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="20"
+                  height="20"
+                  viewBox="0 0 20 20"
+                  fill="none"
+                >
+                  <mask
+                    id="mask0_1_1438"
+                    style="mask-type: alpha"
+                    maskUnits="userSpaceOnUse"
+                    x="0"
+                    y="0"
+                    width="20"
+                    height="20"
+                  >
+                    <rect width="20" height="20" fill="#D9D9D9" />
+                  </mask>
+                  <g mask="url(#mask0_1_1438)">
+                    <path
+                      d="M1.53857 15.5448V4.77563H3.07701V15.5448H1.53857ZM3.84624 15.5448V4.77563H5.3847V15.5448H3.84624ZM6.15393 15.5448V4.77563H6.92316V15.5448H6.15393ZM8.46159 15.5448V4.77563H10.0001V15.5448H8.46159ZM10.7693 15.5448V4.77563H13.0769V15.5448H10.7693ZM13.8462 15.5448V4.77563H14.6154V15.5448H13.8462ZM16.1539 15.5448V4.77563H18.4615V15.5448H16.1539Z"
+                      fill="#1C1B1F"
+                    />
+                  </g>
+                </svg>
+              </span>
+
+              Grijswaarden
+            </li>
+            <li
+              id="toggle-contrast"
+              class="special-li gap-2 d-flex align-items-center"
+            >
+              <span>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="20"
+                  height="20"
+                  viewBox="0 0 20 20"
+                  fill="none"
+                >
+                  <mask
+                    id="mask0_1_1443"
+                    style="mask-type: alpha"
+                    maskUnits="userSpaceOnUse"
+                    x="0"
+                    y="0"
+                    width="20"
+                    height="20"
+                  >
+                    <rect width="20" height="20" fill="#D9D9D9" />
+                  </mask>
+                  <g mask="url(#mask0_1_1443)">
+                    <path
+                      d="M9.99998 17.0833C8.26495 17.0833 6.78953 16.4837 5.57371 15.2845C4.3579 14.0852 3.75 12.632 3.75 10.9247C3.75 10.0561 3.91426 9.25965 4.24279 8.5353C4.57132 7.81094 5.0171 7.15923 5.58012 6.58017L9.99998 2.24365L14.4198 6.58017C14.9829 7.15923 15.4286 7.81495 15.7572 8.54732C16.0857 9.27968 16.25 10.0721 16.25 10.9247C16.25 12.632 15.6421 14.0852 14.4262 15.2845C13.2104 16.4837 11.735 17.0833 9.99998 17.0833ZM9.99998 15.8334V4.00003L6.45831 7.50003C5.9722 7.95836 5.60762 8.47706 5.36456 9.05611C5.12151 9.63518 4.99998 10.258 4.99998 10.9247C4.99998 12.2719 5.48609 13.4268 6.45831 14.3894C7.43053 15.3521 8.61109 15.8334 9.99998 15.8334Z"
+                      fill="#1C1B1F"
+                    />
+                  </g>
+                </svg>
+              </span>
+              Hoog contrast
+            </li>
+            <li
+              id="toggle-negative"
+              class="special-li gap-2 d-flex align-items-center"
+            >
+              <span>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 24 24"
+                  width="24"
+                  height="24"
+                  color="#1c1b1f"
+                  fill="none"
+                >
+                  <path
+                    d="M21.544 11.045C21.848 11.4713 22 11.6845 22 12C22 12.3155 21.848 12.5287 21.544 12.955C20.1779 14.8706 16.6892 19 12 19C7.31078 19 3.8221 14.8706 2.45604 12.955C2.15201 12.5287 2 12.3155 2 12C2 11.6845 2.15201 11.4713 2.45604 11.045C3.8221 9.12944 7.31078 5 12 5C16.6892 5 20.1779 9.12944 21.544 11.045Z"
+                    stroke="currentColor"
+                    stroke-width="1.5"
+                  ></path>
+                  <path
+                    d="M15 12C15 10.3431 13.6569 9 12 9C10.3431 9 9 10.3431 9 12C9 13.6569 10.3431 15 12 15C13.6569 15 15 13.6569 15 12Z"
+                    stroke="currentColor"
+                    stroke-width="1.5"
+                  ></path>
+                </svg>
+              </span>
+              Negatief contrast
+            </li>
+            <li
+              id="toggle-underline"
+              class="special-li gap-2 d-flex align-items-center"
+            >
+              <span>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 24 24"
+                  width="24"
+                  height="24"
+                  color="#1c1b1f"
+                  fill="none"
+                >
+                  <path
+                    d="M9.52051 14.4359L14.4335 9.52283"
+                    stroke="currentColor"
+                    stroke-width="1.5"
+                    stroke-linecap="round"
+                  ></path>
+                  <path
+                    d="M12.5685 15.1086C13.3082 16.249 13.1108 17.418 12.2563 18.2725L9.26109 21.2678C8.28269 22.2462 6.69638 22.2462 5.71798 21.2678L2.73185 18.2816C1.75345 17.3032 1.75345 15.7169 2.73185 14.7385L5.72706 11.7433C6.429 11.0413 7.76312 10.636 8.90958 11.4662M15.1083 12.5688C16.2487 13.3085 17.4177 13.1111 18.2722 12.2566L21.2674 9.26138C22.2458 8.28297 22.2458 6.69666 21.2674 5.71825L18.2813 2.7321C17.3029 1.75369 15.7166 1.75369 14.7382 2.7321L11.743 5.72733C11.041 6.42927 10.6357 7.7634 11.4659 8.90986"
+                    stroke="currentColor"
+                    stroke-width="1.5"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  ></path>
+                </svg>
+              </span>
+              Onderstreep links
+            </li>
+            <li
+              id="toggle-theme"
+              class="special-li gap-2 d-flex align-items-center"
+            >
+              <span>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 24 24"
+                  width="24"
+                  height="24"
+                  color="#1c1b1f"
+                  fill="none"
+                >
+                  <path
+                    d="M6.08938 14.999C5.71097 14.1484 5.5 13.2021 5.5 12.2049C5.5 8.50135 8.41015 5.49902 12 5.49902C15.5899 5.49902 18.5 8.50135 18.5 12.2049C18.5 13.2021 18.289 14.1484 17.9106 14.999"
+                    stroke="currentColor"
+                    stroke-width="1.5"
+                    stroke-linecap="round"
+                  ></path>
+                  <path
+                    d="M12 1.99902V2.99902"
+                    stroke="currentColor"
+                    stroke-width="1.5"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  ></path>
+                  <path
+                    d="M22 11.999H21"
+                    stroke="currentColor"
+                    stroke-width="1.5"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  ></path>
+                  <path
+                    d="M3 11.999H2"
+                    stroke="currentColor"
+                    stroke-width="1.5"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  ></path>
+                  <path
+                    d="M19.0704 4.92773L18.3633 5.63484"
+                    stroke="currentColor"
+                    stroke-width="1.5"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  ></path>
+                  <path
+                    d="M5.6368 5.63582L4.92969 4.92871"
+                    stroke="currentColor"
+                    stroke-width="1.5"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  ></path>
+                  <path
+                    d="M14.517 19.3055C15.5274 18.9786 15.9326 18.0538 16.0466 17.1236C16.0806 16.8458 15.852 16.6152 15.572 16.6152L8.47685 16.6154C8.18725 16.6155 7.95467 16.8612 7.98925 17.1488C8.1009 18.0771 8.3827 18.7553 9.45345 19.3055M14.517 19.3055C14.517 19.3055 9.62971 19.3055 9.45345 19.3055M14.517 19.3055C14.3955 21.2505 13.8338 22.0207 12.0068 21.9991C10.0526 22.0352 9.60303 21.0831 9.45345 19.3055"
+                    stroke="currentColor"
+                    stroke-width="1.5"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  ></path>
+                </svg>
+              </span>
+              Lichte achtergrond
+            </li>
+            <li
+              id="toggle-font"
+              class="special-li gap-2 d-flex align-items-center"
+            >
+              <span>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 24 24"
+                  width="24"
+                  height="24"
+                  color="#1c1b1f"
+                  fill="none"
+                >
+                  <path
+                    d="M14 19L11.1069 10.7479C9.76348 6.91597 9.09177 5 8 5C6.90823 5 6.23652 6.91597 4.89309 10.7479L2 19M4.5 12H11.5"
+                    stroke="currentColor"
+                    stroke-width="1.5"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  ></path>
+                  <path
+                    d="M21.9692 13.9392V18.4392M21.9692 13.9392C22.0164 13.1161 22.0182 12.4891 21.9194 11.9773C21.6864 10.7709 20.4258 10.0439 19.206 9.89599C18.0385 9.75447 17.1015 10.055 16.1535 11.4363M21.9692 13.9392L19.1256 13.9392C18.6887 13.9392 18.2481 13.9603 17.8272 14.0773C15.2545 14.7925 15.4431 18.4003 18.0233 18.845C18.3099 18.8944 18.6025 18.9156 18.8927 18.9026C19.5703 18.8724 20.1955 18.545 20.7321 18.1301C21.3605 17.644 21.9692 16.9655 21.9692 15.9392V13.9392Z"
+                    stroke="currentColor"
+                    stroke-width="1.5"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  ></path>
+                </svg>
+              </span>
+              Leesbaar lettertype
+            </li>
+            <li
+              id="clear-all"
+              class="special-li gap-2 d-flex align-items-center"
+            >
+              <span>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 24 24"
+                  width="24"
+                  height="24"
+                  color="#1c1b1f"
+                  fill="none"
+                >
+                  <path
+                    d="M5.75 5L19.75 19"
+                    stroke="currentColor"
+                    stroke-width="1.5"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  ></path>
+                  <path
+                    d="M22.75 12C22.75 6.47715 18.2728 2 12.75 2C7.22715 2 2.75 6.47715 2.75 12C2.75 17.5228 7.22715 22 12.75 22C18.2728 22 22.75 17.5228 22.75 12Z"
+                    stroke="currentColor"
+                    stroke-width="1.5"
+                  ></path>
+                </svg>
+              </span>
+              Terugzetten
+            </li>
+          </ul>
+        </div>
+      </div>
     </header>
     <main>
       <section class="hero-section gsap-container">
