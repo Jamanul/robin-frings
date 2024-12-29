@@ -42,12 +42,14 @@ html, body {
 }
 .grayscale-100{
   filter: grayscale(100%);
+  overflow-x: hidden;
 }
 .high-contrast {
   background-color: black !important; /* High contrast background */
   color: var(--white) !important;
   filter: contrast(1.5) !important; /* Increase contrast */ 
   position: relative !important;
+  overflow-x: hidden;
 }
 .underline {
   text-decoration: underline !important;
@@ -171,15 +173,19 @@ a {
   right: 0px;
   z-index: 100000;
   color: var(--black);
+  max-width: 300px !important;
+ 
 }
 .special-button-top-div{
+  width: 300px !important;
   border-radius: 100px 0px 0px 100px !important;
   background:var(--white);
   transition: translate 0.5s ease;
-  translate: 180px 0px;
+  translate: 230px 0px;
+  padding: 16px 56px 16px 24px !important;
 }
 .special-button-div{
-  max-width: 220px !important;
+  max-width: 240px !important;
   background:var(--white);
   transition: translate 0.5s ease;
   translate: 300px 0px;
@@ -194,14 +200,30 @@ a {
 }
 
 .special-li{
-  padding: 12px 24px 2px 24px !important;
+  padding: 12px 24px 12px 24px !important;
   color: var(--black);
+  transition: background-color 0.3s, color 0.3s;
+}
+.special-li:hover {
+  background-color: black; /* Change background to black */
+  color: white; /* Change text color to white */
+}
+
+.special-li:hover svg path {
+  fill: white; /* Change the SVG color to white */
+}
+.special-li.active {
+  background-color: black; /* Background black when active */
+  color: white; /* Text white when active */
+}
+
+.special-li.active svg path {
+  fill: white; 
 }
 .nav-link {
     text-decoration: none;
     position: relative !important;
     transition: color 0.3s ease;
-    
   }
   
   .nav-link:hover {
@@ -257,7 +279,7 @@ a {
 .hero-section{
   position: relative;
  overflow: visible;
-  clip-path: inset(-100% -100% 0px -100%); /* Hide bottom overflow by 50px */
+  clip-path: inset(-100% -100% 0px -100%);
 }
 .page-title{
   font-weight: 500 !important;

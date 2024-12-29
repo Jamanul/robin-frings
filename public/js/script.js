@@ -310,8 +310,12 @@ function increaseFontSize() {
     n++;
     console.log(n);
   }
-
+  if(n==0){
+    document.getElementById("increase-font").classList.remove('active');
+    document.getElementById("decrease-font").classList.remove('active');
+  }
   if (n <= 2) {
+    document.getElementById("increase-font").classList.add('active');
     const tags = ["p", "h1", "h2", "span"];
 
     tags.forEach((tag) => {
@@ -332,10 +336,15 @@ function decreaseFontSize() {
     console.log(n);
   }
   if (n <= -3) return; // Limit the number of increases to 2
-
+  if(n==0){
+    document.getElementById("increase-font").classList.remove('active');
+    document.getElementById("decrease-font").classList.remove('active');
+  }
   // List of specific tags to adjust
+  if(n<0){
+    document.getElementById("decrease-font").classList.add('active');
+  }
   const tags = ["p", "h1", "h2", "span"];
-
   tags.forEach((tag) => {
     const elements = document.getElementsByTagName(tag); // Get all elements of this tag
     for (let element of elements) {
@@ -368,6 +377,8 @@ document.addEventListener("DOMContentLoaded", function () {
     Array.from(document.getElementsByClassName("no-invert")).forEach((logo) => {
       logo.classList.add("negative-invert");
     });
+
+    document.getElementById("toggle-negative").classList.add('active');
     document.body.classList.add("negative");
     document.body.classList.remove("light");
     document.body.classList.remove("high-contrast");
@@ -383,10 +394,17 @@ document.addEventListener("DOMContentLoaded", function () {
         element.classList.remove("light-button");
       });
     });
+    document.getElementById("toggle-contrast").classList.remove('active');
+    document.getElementById("toggle-grayscale").classList.remove('active');
+    document.getElementById("toggle-theme").classList.remove('active');
     specialText.classList.remove("negative-invert");
     specialButton.classList.remove("negative-invert");
   }
   if (isHighContrast) {
+    document.getElementById("toggle-contrast").classList.add('active');
+    document.getElementById("toggle-negative").classList.remove('active');
+    document.getElementById("toggle-grayscale").classList.remove('active');
+    document.getElementById("toggle-theme").classList.remove('active');
     document.body.classList.add("high-contrast");
     document.body.classList.remove("grayscale-100");
     document.body.classList.remove("negative");
@@ -406,10 +424,14 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   }
   if (isGrayscale) {
+    document.getElementById("toggle-grayscale").classList.add('active');
     document.body.classList.add("grayscale-100");
     document.body.classList.remove("negative");
     document.body.classList.remove("high-contrast");
     document.body.classList.remove("light");
+    document.getElementById("toggle-contrast").classList.remove('active');
+    document.getElementById("toggle-negative").classList.remove('active');
+    document.getElementById("toggle-theme").classList.remove('active');
     Array.from(document.getElementsByClassName("no-invert")).forEach((logo) => {
       logo.classList.remove("negative-invert");
     });
@@ -429,9 +451,11 @@ document.addEventListener("DOMContentLoaded", function () {
     Array.from(elements).forEach((element) => {
       element.classList.add("underline");
     });
+    document.getElementById("toggle-underline").classList.add('active');
   }
   if (isFont) {
     document.body.classList.add("font-inter");
+    document.getElementById("toggle-font").classList.add('active');
   }
   if (isTheme) {
     const logo = document.getElementById("logo-img");
@@ -440,6 +464,10 @@ document.addEventListener("DOMContentLoaded", function () {
     document.body.classList.remove("high-contrast");
     document.body.classList.remove("grayscale-100");
     document.body.classList.remove("negative");
+    document.getElementById("toggle-theme").classList.add('active');
+    document.getElementById("toggle-contrast").classList.remove('active');
+    document.getElementById("toggle-negative").classList.remove('active');
+    document.getElementById("toggle-grayscale").classList.remove('active');
     Array.from(document.getElementsByClassName("no-invert")).forEach((logo) => {
       logo.classList.add("negative-invert");
     });
@@ -471,6 +499,10 @@ function saveToLocalStorage() {
 // Function to toggle contrast
 function toggleContrast() {
   if (!isHighContrast) {
+    document.getElementById("toggle-contrast").classList.add('active');
+    document.getElementById("toggle-negative").classList.remove('active');
+    document.getElementById("toggle-grayscale").classList.remove('active');
+    document.getElementById("toggle-theme").classList.remove('active');
     document.body.classList.add("high-contrast");
     document.body.classList.remove("grayscale-100");
     document.body.classList.remove("negative");
@@ -489,6 +521,7 @@ function toggleContrast() {
       });
     });
   } else {
+    document.getElementById("toggle-contrast").classList.remove('active');
     document.body.classList.remove("high-contrast");
   }
   isHighContrast = !isHighContrast;
@@ -501,6 +534,7 @@ function toggleContrast() {
 // Function to toggle grayscale
 function toggleGrayscale() {
   if (!isGrayscale) {
+    document.getElementById("toggle-grayscale").classList.add('active');
     document.body.classList.add("grayscale-100");
     document.body.classList.remove("negative");
     document.body.classList.remove("high-contrast");
@@ -518,7 +552,11 @@ function toggleGrayscale() {
         element.classList.remove("light-button");
       });
     });
+    document.getElementById("toggle-contrast").classList.remove('active');
+    document.getElementById("toggle-negative").classList.remove('active');
+    document.getElementById("toggle-theme").classList.remove('active');
   } else {
+    document.getElementById("toggle-grayscale").classList.remove('active');
     document.body.classList.remove("grayscale-100");
   }
   isGrayscale = !isGrayscale;
@@ -535,10 +573,14 @@ function toggleNegative() {
     Array.from(document.getElementsByClassName("no-invert")).forEach((logo) => {
       logo.classList.add("negative-invert");
     });
+    document.getElementById("toggle-negative").classList.add('active');
     document.body.classList.add("negative");
     document.body.classList.remove("light");
     document.body.classList.remove("high-contrast");
     document.body.classList.remove("grayscale-100");
+    document.getElementById("toggle-contrast").classList.remove('active');
+    document.getElementById("toggle-grayscale").classList.remove('active');
+    document.getElementById("toggle-theme").classList.remove('active');
     ["p", "h1", "h2", "button"].forEach((tag) => {
       Array.from(document.getElementsByTagName(tag)).forEach((element) => {
         element.classList.add("negative-invert");
@@ -553,6 +595,7 @@ function toggleNegative() {
     specialText.classList.remove("negative-invert");
     specialButton.classList.remove("negative-invert");
   } else {
+    document.getElementById("toggle-negative").classList.remove('active');
     Array.from(document.getElementsByClassName("no-invert")).forEach((logo) => {
       logo.classList.remove("negative-invert");
     });
@@ -577,7 +620,9 @@ function toggleUnderline() {
     Array.from(elements).forEach((element) => {
       element.classList.add("underline");
     });
+     document.getElementById("toggle-underline").classList.add('active');
   } else {
+    document.getElementById("toggle-underline").classList.remove('active');
     Array.from(elements).forEach((element) => {
       element.classList.remove("underline");
     });
@@ -590,8 +635,10 @@ function toggleUnderline() {
 function toggleFont() {
   if (!isFont) {
     document.body.classList.add("font-inter");
+    document.getElementById("toggle-font").classList.add('active');
   } else {
     document.body.classList.remove("font-inter");
+    document.getElementById("toggle-font").classList.remove('active');
   }
   isFont = !isFont;
   saveToLocalStorage(); // Save state
@@ -602,6 +649,7 @@ function toggleTheme() {
   const logo = document.getElementById("logo-img");
   if (!isTheme) {
     logo.classList.add("logo-bg");
+    document.getElementById("toggle-theme").classList.add('active');
     document.body.classList.add("light");
     document.body.classList.remove("high-contrast");
     document.body.classList.remove("grayscale-100");
@@ -620,7 +668,11 @@ function toggleTheme() {
       });
     });
     specialButton.classList.remove("light-button");
+    document.getElementById("toggle-contrast").classList.remove('active');
+    document.getElementById("toggle-negative").classList.remove('active');
+    document.getElementById("toggle-grayscale").classList.remove('active');
   } else {
+    document.getElementById("toggle-theme").classList.remove('active');
     Array.from(document.getElementsByClassName("no-invert")).forEach((logo) => {
       logo.classList.remove("negative-invert");
     });
@@ -654,7 +706,14 @@ function clearAll() {
   document.body.classList.remove("negative");
   document.body.classList.remove("light");
   document.getElementById("logo-img").classList.remove("logo-bg");
-
+  document.getElementById("toggle-contrast").classList.remove('active');
+  document.getElementById("toggle-negative").classList.remove('active');
+  document.getElementById("toggle-grayscale").classList.remove('active');
+  document.getElementById("toggle-theme").classList.remove('active');
+  document.getElementById("increase-font").classList.remove('active');
+  document.getElementById("decrease-font").classList.remove('active');
+  document.getElementById("toggle-underline").classList.remove('active');
+  document.getElementById("toggle-font").classList.remove('active');
   const elements = document.getElementsByTagName("a");
   Array.from(elements).forEach((element) => {
     element.classList.remove("underline");
