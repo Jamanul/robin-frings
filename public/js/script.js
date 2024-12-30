@@ -101,14 +101,18 @@ const specialButton = document.getElementById("special-button");
 const specialText = document.getElementById("special-text");
 const specialTopDiv = document.getElementById("special-top-div");
 const specialBottomDiv = document.getElementById("special-bottom-div");
+const specialContainer = document.getElementById("special-top-container");
 let buttonShow = true;
 function showContainer() {
   if (buttonShow) {
-    specialTopDiv.classList.remove("special-button-traslate-180");
-    specialBottomDiv.classList.remove("special-button-traslate-180");
+    // specialTopDiv.classList.remove("special-button-traslate-180");
+    specialContainer.classList.remove("special-button-traslate-180");
+    // specialBottomDiv.classList.remove("special-button-traslate-180");
   } else {
-    specialTopDiv.classList.add("special-button-traslate-180");
-    specialBottomDiv.classList.add("special-button-traslate-180");
+    // specialTopDiv.classList.add("special-button-traslate-180");
+    // specialBottomDiv.classList.add("special-button-traslate-180");
+    specialContainer.classList.add("special-button-traslate-180");
+  
   }
   buttonShow = !buttonShow;
 }
@@ -220,6 +224,9 @@ document.addEventListener("DOMContentLoaded", function () {
     Array.from(document.getElementsByClassName("font-black-class")).forEach((logo) => {
       logo.classList.remove("font-black");
     });
+    Array.from(document.getElementsByClassName("bg-white-class")).forEach((logo) => {
+      logo.classList.remove("bg-white");
+    });
     ["button"].forEach((tag) => {
       Array.from(document.getElementsByTagName(tag)).forEach((element) => {
         element.classList.remove("light-button");
@@ -242,6 +249,9 @@ document.addEventListener("DOMContentLoaded", function () {
     document.body.classList.remove("light");
     Array.from(document.getElementsByClassName("font-black-class")).forEach((logo) => {
       logo.classList.remove("font-black");
+    });
+    Array.from(document.getElementsByClassName("bg-white-class")).forEach((logo) => {
+      logo.classList.remove("bg-white");
     });
     Array.from(document.getElementsByClassName("no-invert")).forEach((logo) => {
       logo.classList.remove("negative-invert");
@@ -268,6 +278,9 @@ document.addEventListener("DOMContentLoaded", function () {
     document.getElementById("toggle-theme").classList.remove('active');
     Array.from(document.getElementsByClassName("font-black-class")).forEach((logo) => {
       logo.classList.remove("font-black");
+    });
+    Array.from(document.getElementsByClassName("bg-white-class")).forEach((logo) => {
+      logo.classList.remove("bg-white");
     });
     Array.from(document.getElementsByClassName("no-invert")).forEach((logo) => {
       logo.classList.remove("negative-invert");
@@ -308,6 +321,9 @@ document.addEventListener("DOMContentLoaded", function () {
     Array.from(document.getElementsByClassName("font-black-class")).forEach((logo) => {
       logo.classList.add("font-black");
     });
+    Array.from(document.getElementsByClassName("bg-white-class")).forEach((logo) => {
+      logo.classList.add("bg-white");
+    });
     ["p", "h1", "h2", "button"].forEach((tag) => {
       Array.from(document.getElementsByTagName(tag)).forEach((element) => {
         element.classList.remove("negative-invert");
@@ -347,6 +363,9 @@ function toggleContrast() {
     Array.from(document.getElementsByClassName("font-black-class")).forEach((logo) => {
       logo.classList.remove("font-black");
     });
+    Array.from(document.getElementsByClassName("bg-white-class")).forEach((logo) => {
+      logo.classList.remove("bg-white");
+    });
     Array.from(document.getElementsByClassName("no-invert")).forEach((logo) => {
       logo.classList.remove("negative-invert");
     });
@@ -381,6 +400,9 @@ function toggleGrayscale() {
     document.body.classList.remove("light");
     Array.from(document.getElementsByClassName("font-black-class")).forEach((logo) => {
       logo.classList.remove("font-black");
+    });
+    Array.from(document.getElementsByClassName("bg-white-class")).forEach((logo) => {
+      logo.classList.remove("bg-white");
     });
     Array.from(document.getElementsByClassName("no-invert")).forEach((logo) => {
       logo.classList.remove("negative-invert");
@@ -427,12 +449,14 @@ function toggleNegative() {
     Array.from(document.getElementsByClassName("font-black-class")).forEach((logo) => {
       logo.classList.remove("font-black");
     });
+    Array.from(document.getElementsByClassName("bg-white-class")).forEach((logo) => {
+      logo.classList.remove("bg-white");
+    });
     ["p", "h1", "h2", "button"].forEach((tag) => {
       Array.from(document.getElementsByTagName(tag)).forEach((element) => {
         element.classList.add("negative-invert");
       });
     });
-
     ["button"].forEach((tag) => {
       Array.from(document.getElementsByTagName(tag)).forEach((element) => {
         element.classList.remove("light-button");
@@ -511,6 +535,9 @@ function toggleTheme() {
     Array.from(document.getElementsByClassName("font-black-class")).forEach((logo) => {
       logo.classList.add("font-black");
     });
+    Array.from(document.getElementsByClassName("bg-white-class")).forEach((logo) => {
+      logo.classList.add("bg-white");
+    });
     ["button"].forEach((tag) => {
       Array.from(document.getElementsByTagName(tag)).forEach((element) => {
         element.classList.add("light-button");
@@ -526,6 +553,9 @@ function toggleTheme() {
     document.body.classList.remove("light");
     Array.from(document.getElementsByClassName("font-black-class")).forEach((logo) => {
       logo.classList.remove("font-black");
+    });
+    Array.from(document.getElementsByClassName("bg-white-class")).forEach((logo) => {
+      logo.classList.remove("bg-white");
     });
     ["button"].forEach((tag) => {
       Array.from(document.getElementsByTagName(tag)).forEach((element) => {
@@ -583,6 +613,12 @@ function clearAll() {
   Array.from(document.getElementsByClassName("font-black-class")).forEach((logo) => {
     logo.classList.remove("font-black");
   });
+  Array.from(document.getElementsByClassName("bg-white-class")).forEach((logo) => {
+    logo.classList.remove("bg-white");
+  });
+  originalFontSizes.forEach((originalSize, element) => {
+    element.style.fontSize = `${originalSize}px`;
+  });
   saveToLocalStorage();
 }
 
@@ -627,10 +663,10 @@ document.addEventListener("DOMContentLoaded", () => {
   // Simulate loading time (replace this with your logic)
   setTimeout(() => {
     loadingOverlay.classList.add("hidden"); // Hide the overlay
-  }, 1000); // 2 seconds loading time
+  }, 100); // 2 seconds loading time
 });
 
 
 setTimeout(() => {
   loadingOverlay.remove(); // Completely remove the overlay from the DOM
-}, 1500); 
+}, 100); 

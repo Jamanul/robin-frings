@@ -31,7 +31,7 @@
             src="./public/images/robin logo 1.png"
             alt="RF"
         /></a>
-        <div>
+        <div class="responsive-hide">
           <ul class="d-flex nav-links wm-text-normal align-items-center">
             <li class="no-invert">
               <a class="nav-link" href="index.html">Home</a>
@@ -51,8 +51,111 @@
             </li>
           </ul>
         </div>
+        <div class="responsive-block">
+          <div
+          class="responsive-icon"
+            data-bs-toggle="offcanvas"
+            href="#offcanvasExample"
+            role="button"
+            aria-controls="offcanvasExample"
+          >
+            <span class="font-black-class fix-svg">
+              <svg
+                class="no-invert"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 448 512"
+                height="24"
+                width="24"
+                fill="#ffffff"
+              >
+                <!--!Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
+                <path
+                  d="M0 96C0 78.3 14.3 64 32 64l384 0c17.7 0 32 14.3 32 32s-14.3 32-32 32L32 128C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32l384 0c17.7 0 32 14.3 32 32s-14.3 32-32 32L32 288c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32L32 448c-17.7 0-32-14.3-32-32s14.3-32 32-32l384 0c17.7 0 32 14.3 32 32z"
+                />
+              </svg>
+            </span>
+          </div>
+        </div>
       </nav>
-      <div class="special-button-container d-flex flex-column align-items-end">
+      <div class="offcanvas offcanvas-start responsive-block" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
+        <div class="offcanvas-header">
+          <h5 class="offcanvas-title" id="offcanvasExampleLabel"></h5>
+          <button type="button" class="btn-close text-reset text-white responsive-icon" data-bs-dismiss="offcanvas" aria-label="Close">
+            <span class="font-black-class fix-svg">
+              <svg xmlns="http://www.w3.org/2000/svg" class="no-invert" viewBox="0 0 384 512"><!--!Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path d="M376.6 84.5c11.3-13.6 9.5-33.8-4.1-45.1s-33.8-9.5-45.1 4.1L192 206 56.6 43.5C45.3 29.9 25.1 28.1 11.5 39.4S-3.9 70.9 7.4 84.5L150.3 256 7.4 427.5c-11.3 13.6-9.5 33.8 4.1 45.1s33.8 9.5 45.1-4.1L192 306 327.4 468.5c11.3 13.6 31.5 15.4 45.1 4.1s15.4-31.5 4.1-45.1L233.7 256 376.6 84.5z"/>
+              </svg>
+            </span>
+          </button>
+        </div>
+        <div class="offcanvas-body no-invert d-flex align-items-center justify-content-center flex-column ">
+          <ul class="d-flex nav-links-responsive wm-text-normal align-items-center flex-column justify-content-center">
+            <li class="no-invert">
+              <a class="nav-link" href="index.html">Home</a>
+            </li>
+            <li class="no-invert ">
+              <a class="nav-link" href="over-robin.html">Over Robin Frings</a>
+            </li>
+            <li class="no-invert ">
+              <a class="nav-link" href="media.html">In de media</a>
+            </li>
+            <li class="no-invert ">
+              <a href="contact.html"
+                >
+                  Samenwerken?
+                </a
+              >
+            </li> 
+          </ul>
+          <div class="d-flex pt-5 gap-5 align-items-center justify-content-center" >
+            <div>
+              <span class="">
+                <svg
+                  class="no-invert"
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                >
+                  <path
+                    d="M17.3766 0H6.62295C2.97106 0 0 2.9712 0 6.62309V17.3768C0 21.0288 2.97106 23.9999 6.62295 23.9999H17.3766C21.0288 23.9999 23.9999 21.0287 23.9999 17.3768V6.62309C24 2.9712 21.0288 0 17.3766 0ZM21.8706 17.3768C21.8706 19.8547 19.8547 21.8705 17.3768 21.8705H6.62295C4.1452 21.8706 2.12938 19.8547 2.12938 17.3768V6.62309C2.12938 4.14534 4.1452 2.12938 6.62295 2.12938H17.3766C19.8545 2.12938 21.8705 4.14534 21.8705 6.62309L21.8706 17.3768Z"
+                    fill="white"
+                  />
+                  <path
+                    d="M11.9999 5.81604C8.58993 5.81604 5.81577 8.5902 5.81577 12.0002C5.81577 15.41 8.58993 18.1841 11.9999 18.1841C15.4099 18.1841 18.1841 15.41 18.1841 12.0002C18.1841 8.5902 15.4099 5.81604 11.9999 5.81604ZM11.9999 16.0545C9.76422 16.0545 7.94516 14.2358 7.94516 12.0001C7.94516 9.7642 9.76408 7.94528 11.9999 7.94528C14.2358 7.94528 16.0547 9.7642 16.0547 12.0001C16.0547 14.2358 14.2356 16.0545 11.9999 16.0545Z"
+                    fill="white"
+                  />
+                  <path
+                    d="M18.4434 4.0105C18.0332 4.0105 17.6302 4.17659 17.3404 4.46761C17.0493 4.7572 16.8819 5.16037 16.8819 5.57205C16.8819 5.98245 17.0494 6.38547 17.3404 6.67649C17.63 6.96608 18.0332 7.13359 18.4434 7.13359C18.8551 7.13359 19.2569 6.96608 19.5479 6.67649C19.8389 6.38547 20.005 5.98231 20.005 5.57205C20.005 5.16037 19.8389 4.7572 19.5479 4.46761C19.2583 4.17659 18.8551 4.0105 18.4434 4.0105Z"
+                    fill="white"
+                  />
+                </svg>
+              </span>
+            </div>
+            <div>
+              <span class="">
+                <svg
+                  class="no-invert"
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="20"
+                  height="24"
+                  viewBox="0 0 20 24"
+                  fill="none"
+                >
+                  <path
+                    d="M17.0733 5.56163C16.9215 5.48313 16.7736 5.39709 16.6304 5.30381C16.2138 5.0284 15.8318 4.70388 15.4927 4.33725C14.6443 3.36647 14.3274 2.38163 14.2107 1.6921H14.2154C14.1179 1.11975 14.1582 0.749439 14.1643 0.749439H10.2999V15.6923C10.2999 15.8929 10.2999 16.0912 10.2915 16.2871C10.2915 16.3115 10.2891 16.334 10.2877 16.3602C10.2877 16.371 10.2877 16.3823 10.2854 16.3935C10.2854 16.3963 10.2854 16.3991 10.2854 16.4019C10.2446 16.9381 10.0728 17.456 9.78489 17.9101C9.49701 18.3643 9.10194 18.7407 8.63443 19.0063C8.14718 19.2835 7.5961 19.4289 7.03552 19.4282C5.23505 19.4282 3.77583 17.9601 3.77583 16.1469C3.77583 14.3338 5.23505 12.8657 7.03552 12.8657C7.37634 12.8654 7.71506 12.919 8.03911 13.0246L8.0438 9.08991C7.06007 8.96284 6.06067 9.04102 5.10866 9.31952C4.15666 9.59802 3.2727 10.0708 2.51255 10.708C1.84649 11.2868 1.28653 11.9773 0.857865 12.7485C0.69474 13.0298 0.0792712 14.1599 0.00473994 15.9941C-0.0421351 17.0352 0.270521 18.1138 0.419584 18.5596V18.569C0.513334 18.8315 0.876615 19.7273 1.46865 20.4824C1.94604 21.0882 2.51006 21.6203 3.14255 22.0616V22.0522L3.15193 22.0616C5.02271 23.3329 7.09693 23.2494 7.09693 23.2494C7.45599 23.2349 8.6588 23.2494 10.0247 22.6021C11.5397 21.8844 12.4022 20.8152 12.4022 20.8152C12.9532 20.1764 13.3914 19.4483 13.6979 18.6623C14.0476 17.743 14.1643 16.6405 14.1643 16.1999V8.27241C14.2111 8.30053 14.8355 8.7135 14.8355 8.7135C14.8355 8.7135 15.7351 9.29006 17.1385 9.66553C18.1454 9.93272 19.5019 9.98897 19.5019 9.98897V6.15272C19.0266 6.20428 18.0615 6.05428 17.0733 5.56163Z"
+                    fill="white"
+                  />
+                </svg>
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        id="special-top-container"
+        class="special-button-container d-flex flex-column align-items-end"
+      >
         <div
           id="special-top-div"
           class="d-flex gap-5 py-2 py-md-3 special-button-top-div align-items-center"
@@ -420,7 +523,7 @@
             </div>
           </div>
           <div class="hero-image">
-            <img src="./public/images/header-foto.png" alt="protrait" />
+            <img class="responsive-hero-width" src="./public/images/header-foto.png" alt="protrait" />
           </div>
         </div>
         <!-- yellow slider -->
@@ -595,13 +698,13 @@
       <!-- contact section-->
       <section class="container form-section">
         <div
-          class="form-button-container gap-5 d-flex align-items-center justify-content-center"
+          class="form-button-container gap-5 d-flex align-items-center justify-content-center "
         >
-          <button class="form-button d-flex align-items-center gap-3">
+          <button class="form-button d-flex align-items-center justify-content-center gap-2 gap-md-3 width-full-button">
             <img src="./public/icons/instragram.svg" alt="insta" />Volg Robin
             Frings op Instagram
           </button>
-          <button class="form-button d-flex align-items-center gap-3">
+          <button class="form-button d-flex align-items-center justify-content-center gap-2 gap-md-3 width-full-button">
             <img src="./public/icons/tik-tok.svg" alt="tiktok" />Volg Robin
             Frings op Tiktok
           </button>
@@ -640,7 +743,7 @@
         
             <!-- Submit Button -->
             <div class="col-md-12 ">
-              <button type="submit" class="form-button mt-3">
+              <button type="submit" class="form-button mt-md-3 width-full-button">
                 Verzenden
               </button>
             </div>
@@ -656,7 +759,7 @@
           alt="robinfrings"
         />
         <div
-          class="d-flex justify-content-center flex-column align-items-center"
+          class="d-flex justify-content-center container flex-column align-items-center"
         >
           <div class="protrait-wrapper">
             <p class="protrait-dsc wm-text-xxl">
@@ -665,7 +768,10 @@
               contact op via onderstaande knop.
             </p>
             <div>
-              <button class="nav-button button-margin" type="button">
+              <button
+                class="nav-button button-margin width-full-button"
+                type="button"
+              >
                 Contact Robin Frings
               </button>
             </div>

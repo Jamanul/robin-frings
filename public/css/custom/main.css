@@ -27,10 +27,14 @@ html, body {
   transition: filter 1s ease;
   transition: background-color 1s ease;
   /* overflow-x: hidden; */
+  
 }
 .font-black{
   color: var(--black) !important;
-  background-color: white !important;
+
+}
+.bg-white{
+  background: white !important;
 }
 
 .font-black svg path {
@@ -42,11 +46,12 @@ html, body {
 .light {
   background: var(--white) !important;
   color: var(--black) !important;
+  overflow-x: hidden;
 }
 
 .negative {
   filter: invert(100%); /* Invert colors */
-  overflow-x: hidden;
+  overflow-x: hidden !important;
 }
 .negative-invert {
   filter: invert(100%); /* Invert colors */
@@ -70,6 +75,7 @@ body {
   background-color: var(--background-dark) !important;
   box-sizing: border-box;
   color: var(--white) !important;
+  overflow-x: hidden !important;
 }
 .light-button{
   color:#010101 !important;
@@ -184,22 +190,21 @@ a {
   right: 0px;
   z-index: 100000;
   color: var(--black);
+  transition: translate 0.5s ease;
   max-width: 300px !important;
- 
+  translate: 230px 0px;
 }
 .special-button-top-div{
   width: 300px !important;
   border-radius: 100px 0px 0px 100px !important;
   background:var(--white);
   transition: translate 0.5s ease;
-  translate: 230px 0px;
   padding: 16px 56px 16px 24px !important;
 }
 .special-button-div{
   max-width: 240px !important;
   background:var(--white);
   transition: translate 0.5s ease;
-  translate: 300px 0px;
   }
 .special-button-traslate-180{
   translate: 0px 0px;
@@ -727,4 +732,15 @@ bottom: 40px !important;
 }
 .responsive-block {
   display: none !important;
+}
+
+.slider p {
+  cursor: pointer;
+}
+.slider img{
+  cursor: pointer;
+}
+.secondary-slider img{
+
+  cursor:pointer;
 }
